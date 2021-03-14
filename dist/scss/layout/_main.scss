@@ -1,0 +1,63 @@
+//main styles
+html,
+body {
+   height: 100%;
+}
+
+/* titles */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   padding: 15px 0;
+}
+p {
+   @include font($base-fz, $base-lh, $base-fc, 400, $base-ff);
+}
+h1 {
+   @include font($fz-h1, $lh-h1, $secondary-fc, 400, $base-ff);
+}
+h2 {
+   @include font($fz-h2, $lh-h2, $secondary-fc, 400, $base-ff);
+}
+h3 {
+   @include font($fz-h3, $lh-h3, $secondary-fc, 400, $base-ff);
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+img {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   vertical-align: middle;
+}
+
+.lined {
+   text-decoration: line-through;
+}
+
+.wrapper {
+   max-width: $max-width;
+   min-width: $min-width;
+   height: 100%;
+   &_full-width {
+      max-width: 100%;
+   }
+   &__inner {
+      margin: 0 60px;
+      height: 100%;
+   }
+   &__inner-row {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}

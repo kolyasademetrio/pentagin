@@ -1,0 +1,24 @@
+/* main variables */
+$min-width: 320px;
+$max-width: 1200px;
+$base-bg: #fff;
+$base-fc: #282828;
+$secondary-fc: #2c303d;
+$base-ff: "opensans-regular", sans-serif;
+$custom-ff: "oswald-bold", sans-serif;
+$default-transition: all 0.6s ease 0s;
+
+$alert-color: #ce2c52;
+$base-blue-color: #2c87ce;
+$base-green-color: #8ae6cf;
+
+$link-color: $base-fc;
+
+$base-fz: 16px;
+$base-lh: 1.4;
+$fz-h1: 24px;
+$lh-h1: $base-lh;
+$fz-h2: 22px;
+$lh-h2: $base-lh;
+$fz-h3: 20px;
+$lh-h3: $base-lh;

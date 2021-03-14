@@ -1,0 +1,23 @@
+@mixin center_transform() {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+@mixin vertical_center_transform() {
+   position: absolute;
+   left: 0;
+   top: 50%;
+   width: 100%;
+   transform: translate(0, -50%);
+}
+
+@mixin font($font-fz, $font-lh, $font-fc, $font-fw: 400, $font-ff: $base-ff, $font-fls: normal) {
+   font-family: $font-ff;
+   font-size: $font-fz;
+   line-height: $font-lh;
+   color: $font-fc;
+   font-weight: $font-fw;
+   letter-spacing: $font-fls;
+}
