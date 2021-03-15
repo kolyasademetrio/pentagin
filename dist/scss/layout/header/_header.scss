@@ -1,22 +1,29 @@
 .header {
-   $mobile-header-height: 54px;
+   $mobile-header-height: 94px;
    height: 70px;
    position: relative;
+   border-bottom: 1px solid #202032;
+
+   %link-transition-hover-alert-color {
+      transition: $default-transition;
+      &:hover {
+         color: $alert-color;
+      }
+   }
+   a {
+      @extend %link-transition-hover-alert-color;
+   }
 
    &__logo {
+      display: block;
+      position: relative;
+      top: -4px;
+      &_mo {
+         display: none;
+      }
    }
    &__logo-img {
-      width: 134px;
-      height: 32px;
-   }
-
-   &__menu-btn {
-      width: $mobile-header-height;
-      height: $mobile-header-height;
-      background-color: #ccc;
-      margin-right: auto;
-      cursor: pointer;
-      display: none;
+      width: 140px;
    }
 
    &__lang {
@@ -24,14 +31,23 @@
       padding: 0 15px;
    }
 
+   &__items {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &_right {
+         margin-left: auto;
+      }
+   }
    &__menu {
-      margin-left: auto;
+      padding-right: 5px;
    }
    &__menu-list,
    &__menu-item {
       display: flex;
       justify-content: center;
       align-items: center;
+      @include font(15px, 1.4, $base-fc, 400);
    }
    &__menu-link {
       display: block;
@@ -39,24 +55,51 @@
       color: $base-fc;
    }
 
-   &__support {
-      padding: 0 15px 0 0;
+   &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   &__item-logo {
+      display: flex;
+   }
+   &__item-logo-img {
+      width: 31px;
+   }
+   &__item-text {
+      padding: 0 0 0 17px;
+      @include font(16px, 1.4, $secondary-fc, 600);
    }
 
-   &__user {
+   &__item_support {
+      padding: 0 15px 0 0;
+      margin-left: auto;
+   }
+
+   &__item_user {
       padding: 0 0 0 15px;
    }
 
    @media screen and (max-width: 992px) {
       & {
          height: $mobile-header-height;
+
+         &__logo {
+            display: none;
+            &_mo {
+               display: flex;
+            }
+         }
+         &__logo-img {
+            width: 220px;
+         }
          &__lang,
          &__support,
          &__user {
             display: none;
          }
          &__menu-btn {
-            display: block;
+            z-index: 2;
          }
          &__menu {
             max-height: 0;
