@@ -24,7 +24,7 @@ const imageminGiflossy = require('imagemin-giflossy');
 //const cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 
 
-function css() {
+function scss() {
    return src('dist/scss/**/*.scss') // Берем источник
       .pipe(sourcemaps.init()) //Что б в режиме разработчика показывало норм стили
       .pipe(plumber()) // Чтоб при ошибке не падал сервер
@@ -102,10 +102,10 @@ function serve() {
    });
 
    watch('dist/**/*.html', series(html)).on('change', browserSync.reload);
-   watch('dist/scss/**/*.scss', series(css)).on('change', browserSync.reload);
+   watch('dist/scss/**/*.scss', series(scss)).on('change', browserSync.reload);
    watch('dist/js/**/*.js', series(js)).on('change', browserSync.reload);
 }
 
 exports.images = images;
-exports.build = series(clear, css, html, js, images);
-exports.default = series(clear, css, html, js, images, serve);
+exports.build = series(clear, scss, html, js, images);
+exports.default = series(clear, scss, html, js, images, serve);

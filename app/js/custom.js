@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function (e) {
-
    function menuToggle(e, containerClassName, targetClassName, activeClassName) {
       return function (e) {
          e.currentTarget
@@ -13,4 +12,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
    if (headerMenuBtn) {
       headerMenuBtn.addEventListener('click', menuToggle(e, 'header', 'header__menu', 'active'));
    }
+});
+
+$(document).ready(function(){
+   $('.js-slider-main').slick();
 });

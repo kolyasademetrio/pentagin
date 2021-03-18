@@ -45,3 +45,27 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+   font-family: 'GT Haptik';
+   src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff2") format("woff2"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff") format("woff"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.otf") format("opentype");
+   font-weight: 900
+}
+
+@font-face {
+   font-family: 'GT Haptik';
+   src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff2") format("woff2"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff") format("woff"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.otf") format("opentype");
+   font-weight: 600
+}
+
+@font-face {
+   font-family: 'Mr Eaves XL Modern';
+   src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff2") format("woff2"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff") format("woff"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.otf") format("opentype");
+   font-weight: normal
+}
+
+@font-face {
+   font-family: 'Mr Eaves XL Modern';
+   src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff2") format("woff2"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff") format("woff"),url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.otf") format("opentype");
+   font-weight: bold
+}

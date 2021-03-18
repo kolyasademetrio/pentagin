@@ -257,6 +257,30 @@ button {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GT Haptik';
+  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'GT Haptik';
+  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mr Eaves XL Modern';
+  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Mr Eaves XL Modern';
+  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
 html,
 body {
   height: 100%;
@@ -325,6 +349,10 @@ img {
   text-decoration: line-through;
 }
 
+.content {
+  padding: 15px 0;
+}
+
 .main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,6 +383,11 @@ img {
 .wrapper__inner {
   margin: 0 58px;
   height: 100%;
+}
+
+.wrapper__inner_full-width {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .wrapper__inner-row {
@@ -629,6 +662,43 @@ img {
   .header__lang {
     padding-left: 10px;
   }
+}
+
+.slider__item {
+  position: relative;
+  width: 405px;
+}
+
+.slider__link {
+  background-position: center;
+  background-size: cover;
+  display: block;
+  position: relative;
+  margin: 0 7px;
+  padding: 0 0 132% 0;
+  overflow: hidden;
+  border: 1px solid #d8dee1;
+}
+
+.slider__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px 7px 20px;
+}
+
+.slider__title {
+  font-family: "GT Haptik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.slider__subtitle {
+  margin: 0 0 7px 0;
+  padding: 0;
 }
 
 .wrapper__inner-row_footer {

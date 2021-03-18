@@ -1,0 +1,38 @@
+.slider__item {
+  position: relative;
+  width: 405px;
+}
+
+.slider__link {
+  background-position: center;
+  background-size: cover;
+  display: block;
+  position: relative;
+  margin: 0 7px;
+  padding: 0 0 132% 0;
+  overflow: hidden;
+  border: 1px solid #d8dee1;
+}
+
+.slider__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px 7px 20px;
+}
+
+.slider__title {
+  font-family: "GT Haptik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.slider__subtitle {
+  margin: 0 0 7px 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=slider.css.map */

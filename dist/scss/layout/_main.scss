@@ -43,6 +43,10 @@ img {
    text-decoration: line-through;
 }
 
+.content {
+   padding: 15px 0;
+}
+
 .main-wrapper {
    display: flex;
    flex-direction: column;
@@ -62,6 +66,10 @@ img {
    &__inner {
       margin: 0 58px;
       height: 100%;
+      &_full-width {
+         margin-left: 0;
+         margin-right: 0;
+      }
    }
    &__inner-row {
       height: 100%;
