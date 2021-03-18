@@ -2,14 +2,9 @@
    $mobile-header-height: 50px;
    height: 70px;
    position: relative;
-   border-bottom: 1px solid #202032;
+   border-bottom: 1px solid $light-color;
 
-   %link-transition-hover-alert-color {
-      transition: $default-transition;
-      &:hover {
-         color: $alert-color;
-      }
-   }
+   
    a {
       @extend %link-transition-hover-alert-color;
    }
@@ -31,32 +26,6 @@
       margin-right: auto;
       padding: 0 15px 0 30px;
    }
-   &__lang-select,
-   &__lang-option {
-      @include base-font();
-   }
-   &__lang-select {
-      display: block;
-      padding: 0 16px 0 0;
-      margin: 0;
-      border: none;
-      appearance: none;
-      background-color: transparent;
-      background-image: url("../images/icons/triangle-close.svg");
-      background-repeat: no-repeat;
-      background-position: right 3px top 50%;
-      background-size: 8px auto;
-      /* Hide arrow icon in IE browsers */
-      &::-ms-expand {
-         display: none;
-      }
-      &:focus {
-         outline: none;
-      }
-      &_mo {
-         display: none;
-      }
-   }
 
    &__items {
       display: flex;
@@ -71,12 +40,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include font(15px, 1.4, $base-fc, 400);
+      @include font(15px, 1.4, $light-fc, 400);
    }
    &__menu-link {
       display: block;
       padding: 0 15px;
-      color: $base-fc;
+      color: $light-fc;
    }
 
    &__item {
@@ -124,16 +93,6 @@
       &__lang {
          padding-right: 0;
          padding-left: 15px;
-      }
-      &__lang-select {
-         display: none;
-         &_mo {
-            display: block;
-         }
-      }
-      &__lang-select,
-      &__lang-option {
-         font-size: 14px;
       }
       &__menu-btn {
          z-index: 2;
