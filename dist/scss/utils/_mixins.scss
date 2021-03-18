@@ -21,3 +21,7 @@
    font-weight: $font-fw;
    letter-spacing: $font-fls;
 }
+
+@mixin base-font() {
+   @include font($base-fz, $base-lh, $base-fc, 400, $base-ff);
+}

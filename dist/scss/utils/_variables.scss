@@ -2,24 +2,31 @@
 $min-width: 320px;
 $max-width: 1200px;
 $base-bg: #fff;
-$base-fc: #41454f;
-$secondary-fc: #15375c;
-$dark-fc: #000;
-$base-ff: "opensans-regular", sans-serif;
-$custom-ff: "oswald-bold", sans-serif;
+
 $default-transition: all 0.6s ease 0s;
 
 $alert-color: #ff0000;
 $base-blue-color: #2c87ce;
 $base-green-color: #8ae6cf;
 
-$link-color: $base-fc;
+$base-ff: "opensans-regular", sans-serif;
+$custom-ff: "oswald-bold", sans-serif;
 
+$base-fc: #41454f;
+$secondary-fc: #15375c;
+$dark-fc: #000;
 $base-fz: 16px;
 $base-lh: 1.4;
+
 $fz-h1: 24px;
 $lh-h1: $base-lh;
 $fz-h2: 22px;
 $lh-h2: $base-lh;
 $fz-h3: 20px;
 $lh-h3: $base-lh;
+
+$link-color: $base-fc;
+
+$desktop-media: 1150px;
+$tablet-media: 768px;
+$mobile-media: 470px;

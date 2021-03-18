@@ -8,7 +8,18 @@
             <div class="header__logo header__logo_mo js-header-menu-btn">
                <img src="images/logo-mo.png" alt="" class="header__logo-img">
             </div>
-            <div class="header__lang">lang</div>
+            <div class="header__lang">
+               <select class="header__lang-select" name="lang" id="lang">
+                  <option class="header__lang-option" value="uk">English (UK)</option>
+                  <option class="header__lang-option" value="ru">Russian (RU)</option>
+                  <option class="header__lang-option" value="ua">Ukrainian (UA)</option>
+               </select>
+               <select class="header__lang-select header__lang-select_mo" name="lang" id="lang">
+                  <option class="header__lang-option" value="uk">(UK)</option>
+                  <option class="header__lang-option" value="ru">(RU)</option>
+                  <option class="header__lang-option" value="ua">(UA)</option>
+               </select>
+            </div>
 
             <div class="header__items header__items_right">
                <nav class="header__menu">
@@ -27,6 +38,7 @@
                <div class="header__item header__item_support">
                   <a href="#" class="header__item-logo">
                      <img src="images/icons/question.svg" alt="question" class="header__item-logo-img">
+                     <span class="header__item-qty">3</span>
                   </a>
                   <a href="#" class="header__item-text">
                      Support
@@ -38,6 +50,12 @@
                   </a>
                   <a href="#" class="header__item-text">
                      Support
+                  </a>
+               </div>
+               <div class="header__item">
+                  <a href="#" class="header__item-logo">
+                     <img src="images/icons/basket.svg" alt="basket" class="header__item-logo-img">
+                     <span class="header__item-qty">3</span>
                   </a>
                </div>
             </div>
