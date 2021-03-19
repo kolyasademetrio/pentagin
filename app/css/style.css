@@ -411,6 +411,10 @@ img {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .wrapper__inner_full-width {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .lang {
@@ -665,6 +669,19 @@ img {
   }
 }
 
+.slider__list {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+}
+
+.slider__list.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
 .slider__item {
   position: relative;
   max-width: 405px;
@@ -700,6 +717,12 @@ img {
 .slider__subtitle {
   margin: 0 0 7px 0;
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__item {
+    max-width: 320px;
+  }
 }
 
 .wrapper__inner-row_footer {
@@ -835,6 +858,81 @@ img {
 
 .footer__legal-item {
   margin: 0 15px 0 0;
+}
+
+@media screen and (max-width: 1150px) {
+  .footer__socials {
+    display: block;
+    margin-left: 1px;
+  }
+  .footer__socials-item {
+    margin-right: 0;
+    margin-top: 8px;
+  }
+  .footer__socials-link {
+    display: inline-block;
+  }
+  .footer__items {
+    padding-top: 15px;
+  }
+  .footer__item {
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    padding-top: 0;
+  }
+  .footer .wrapper__inner {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__item_desk {
+    display: none;
+  }
+  .footer__items {
+    padding-top: 0;
+    display: block;
+  }
+  .footer__items .footer__item {
+    display: block;
+    border-bottom: 1px solid #d8dae0;
+    padding: 0 32px;
+  }
+  .footer__item-title {
+    padding: 24px 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .footer__list {
+    overflow: hidden;
+    -webkit-transition: height 0.5s ease-out 0s;
+    -o-transition: height 0.5s ease-out 0s;
+    transition: height 0.5s ease-out 0s;
+  }
+  .footer__list.active {
+    -webkit-transition: height 0.5s ease-out 0s;
+    -o-transition: height 0.5s ease-out 0s;
+    transition: height 0.5s ease-out 0s;
+  }
+  .footer__list[data-collapsed="true"] {
+    margin: 0;
+    height: 0;
+  }
+  .footer__list[data-collapsed="false"], .footer__list[data-collapsed="true"] {
+    -webkit-transition: height 0.5s ease-out 0s;
+    -o-transition: height 0.5s ease-out 0s;
+    transition: height 0.5s ease-out 0s;
+  }
+  .footer__list-item {
+    margin: 0;
+    padding: 0 0 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

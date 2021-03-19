@@ -77,12 +77,16 @@ img {
       justify-content: space-between;
       align-items: center;
    }
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: $tablet-media) {
       &__inner {
          padding-left: 0;
          padding-right: 0;
          margin-left: 20px;
          margin-right: 20px;
+         &_full-width {
+            margin-left: 0;
+            margin-right: 0;
+         }
       }
    }
 }

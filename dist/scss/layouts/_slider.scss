@@ -1,4 +1,13 @@
 .slider {
+   &__list {
+      opacity: 0;
+      visibility: hidden;
+      transition: $default-transition;
+      &.slick-initialized {
+         visibility: visible;
+         opacity: 1;
+      }
+   }
    &__item {
       position: relative;
       max-width: 405px;
@@ -35,5 +44,10 @@
    }
    &__author {
       //@include font(16px, 1.2, #000, 400);
+   }
+   @media screen and (max-width: $tablet-media) {
+      &__item {
+         max-width: 320px;
+      }
    }
 }

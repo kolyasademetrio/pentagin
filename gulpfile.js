@@ -40,8 +40,9 @@ function css() {
    return src('dist/**/*.css')
       .pipe(sourcemaps.init())
       .pipe(cleanCSS())
+      .pipe(concat('main.min.css'))
       .pipe(sourcemaps.write())
-      .pipe(dest('app'));
+      .pipe(dest('app/css'));
 }
 
 function fonts() {
@@ -65,7 +66,7 @@ function html() {
 function js() {
    return src(['dist/libs/jquery-3.6.0.min.js', 'dist/libs/**/*.js', 'dist/**/*.js'])
       .pipe(sourcemaps.init())
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(concat('main.min.js'))
       .pipe(sourcemaps.write())
       .pipe(dest('app/js'));
