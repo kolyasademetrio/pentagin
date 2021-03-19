@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
    }
 });
 
-$(document).ready(function(){
-   $('.js-slider-main').slick();
+$(document).ready(function () {
+   $('.js-slider-main').slick({
+      centerMode: true,
+      centerPadding: '0px',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      cssEase: 'linear'
+   });
 });

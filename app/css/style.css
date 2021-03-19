@@ -226,7 +226,7 @@ button {
 }
 
 @font-face {
-  font-family: 'opensans-bold';
+  font-family: "opensans-bold";
   src: url("../fonts/opensans/bold/opensans-bold.eot");
   src: url("../fonts/opensans/bold/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/bold/opensans-bold.woff2") format("woff2"), url("../fonts/opensans/bold/opensans-bold.woff") format("woff"), url("../fonts/opensans/bold/opensans-bold.ttf") format("truetype"), url("../fonts/opensans/bold/opensans-bold.svg#opensans-bold") format("svg");
   font-weight: normal;
@@ -234,7 +234,7 @@ button {
 }
 
 @font-face {
-  font-family: 'opensans-light';
+  font-family: "opensans-light";
   src: url("../fonts/opensans/light/opensans-light.eot");
   src: url("../fonts/opensans/light/opensans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/light/opensans-light.woff2") format("woff2"), url("../fonts/opensans/light/opensans-light.woff") format("woff"), url("../fonts/opensans/light/opensans-light.ttf") format("truetype"), url("../fonts/opensans/light/opensans-light.svg#opensans-light") format("svg");
   font-weight: normal;
@@ -242,7 +242,7 @@ button {
 }
 
 @font-face {
-  font-family: 'opensans-regular';
+  font-family: "opensans-regular";
   src: url("../fonts/opensans/regular/opensans-regular.eot");
   src: url("../fonts/opensans/regular/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/regular/opensans-regular.woff2") format("woff2"), url("../fonts/opensans/regular/opensans-regular.woff") format("woff"), url("../fonts/opensans/regular/opensans-regular.ttf") format("truetype"), url("../fonts/opensans/regular/opensans-regular.svg#opensans-regular") format("svg");
   font-weight: normal;
@@ -250,34 +250,35 @@ button {
 }
 
 @font-face {
-  font-family: 'oswald-bold';
+  font-family: "oswald-bold";
   src: url("../fonts/oswald/oswald-bold.eot");
   src: url("../fonts/oswald/oswald-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald/oswald-bold.woff2") format("woff2"), url("../fonts/oswald/oswald-bold.woff") format("woff"), url("../fonts/oswald/oswald-bold.ttf") format("truetype"), url("../fonts/oswald/oswald-bold.svg#oswald-bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
+/* fonts */
 @font-face {
-  font-family: 'GT Haptik';
-  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Black.otf") format("opentype");
+  font-family: "GT Haptik Black";
+  src: url("../fonts/GT-Haptik-Black/GT-Haptik-Black.woff2") format("woff2"), url("../fonts/GT-Haptik-Black/GT-Haptik-Black.woff") format("woff"), url("../fonts/GT-Haptik-Black/GT-Haptik-Black.otf") format("opentype");
   font-weight: 900;
 }
 
 @font-face {
-  font-family: 'GT Haptik';
-  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/gt-haptik/GT-Haptik-Bold.otf") format("opentype");
+  font-family: "GT Haptik Bold";
+  src: url("../fonts/GT-Haptik-Bold/GT-Haptik-Bold.woff2") format("woff2"), url("../fonts/GT-Haptik-Bold/GT-Haptik-Bold.woff") format("woff"), url("../fonts/GT-Haptik-Bold/GT-Haptik-Bold.otf") format("opentype");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Mr Eaves XL Modern';
-  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Reg.otf") format("opentype");
+  font-family: "Mr Eaves XL Modern Reg";
+  src: url("../fonts/MrEavesXLModOT-Reg/MrEavesXLModOT-Reg.woff2") format("woff2"), url("../fonts/MrEavesXLModOT-Reg/MrEavesXLModOT-Reg.woff") format("woff"), url("../fonts/MrEavesXLModOT-Reg/MrEavesXLModOT-Reg.otf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Mr Eaves XL Modern';
-  src: url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff2") format("woff2"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.woff") format("woff"), url("https://d1b2zzpxewkr9z.cloudfront.net/webfonts/mr-eaves/MrEavesXLModOT-Bold.otf") format("opentype");
+  font-family: "Mr Eaves XL Modern Bold";
+  src: url("../fonts/MrEavesXLModOT-Bold/MrEavesXLModOT-Bold.woff2") format("woff2"), url("../fonts/MrEavesXLModOT-Bold/MrEavesXLModOT-Bold.woff") format("woff"), url("../fonts/MrEavesXLModOT-Bold/MrEavesXLModOT-Bold.otf") format("opentype");
   font-weight: bold;
 }
 
@@ -666,7 +667,7 @@ img {
 
 .slider__item {
   position: relative;
-  width: 405px;
+  max-width: 405px;
 }
 
 .slider__link {
@@ -690,7 +691,7 @@ img {
 }
 
 .slider__title {
-  font-family: "GT Haptik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "GT Haptik Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 5px 0;
   padding: 0;
   text-transform: uppercase;

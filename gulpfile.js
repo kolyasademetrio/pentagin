@@ -15,13 +15,15 @@ const imageminZopfli = require('imagemin-zopfli');
 const imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
 const imageminGiflossy = require('imagemin-giflossy');
 
-//const concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-//const uglify       = require('gulp-uglifyjs'),*/ // Подключаем gulp-uglifyjs (для сжатия JS)
-//const cssnano      = require('gulp-cssnano'),*/ // Подключаем пакет для минификации CSS
-//const rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
-//const imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
-//const pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
-//const cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat'); // Подключаем gulp-concat (для конкатенации файлов)
+const cleanCSS = require('gulp-clean-css');// Подключаем пакет для минификации CSS
+
+
+//const rename       = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
+//const imagemin     = require('gulp-imagemin'); // Подключаем библиотеку для работы с изображениями
+//const pngquant     = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
+//const cache        = require('gulp-cache'); // Подключаем библиотеку кеширования
 
 
 function scss() {
@@ -32,6 +34,19 @@ function scss() {
       .pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 9', 'ie 10'], { cascade: true })) // Создаем префиксы
       .pipe(sourcemaps.write('.'))
       .pipe(dest('app/css'));
+}
+
+function css() {
+   return src('dist/**/*.css')
+      .pipe(sourcemaps.init())
+      .pipe(cleanCSS())
+      .pipe(sourcemaps.write())
+      .pipe(dest('app'));
+}
+
+function fonts() {
+   return src('dist/**/*.{ttf,woff,eot,svg}')
+      .pipe(dest('app'));
 }
 
 function html() {
@@ -48,8 +63,12 @@ function html() {
 }
 
 function js() {
-   return src(['dist/**/*.js'])
-      .pipe(dest('app'));
+   return src(['dist/libs/jquery-3.6.0.min.js', 'dist/libs/**/*.js', 'dist/**/*.js'])
+      .pipe(sourcemaps.init())
+      .pipe(uglify())
+      .pipe(concat('main.min.js'))
+      .pipe(sourcemaps.write())
+      .pipe(dest('app/js'));
 }
 
 function images() {
@@ -107,5 +126,5 @@ function serve() {
 }
 
 exports.images = images;
-exports.build = series(clear, scss, html, js, images);
-exports.default = series(clear, scss, html, js, images, serve);
+exports.build = series(clear, scss, html, js, css, fonts, images);
+exports.default = series(clear, scss, html, js, css, fonts, images, serve);

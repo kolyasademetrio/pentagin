@@ -1,0 +1,39 @@
+.slider {
+   &__item {
+      position: relative;
+      max-width: 405px;
+   }
+   &__link {
+      background-position: center;
+      background-size: cover;
+      display: block;
+      position: relative;
+      margin: 0 7px;
+      padding: 0 0 132% 0;
+      overflow: hidden;
+      border: 1px solid #d8dee1;
+   }
+   &__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 10px 7px 20px;
+   }
+   &__title {
+      //@include font(25px, 1.2, #000, 900);
+      font-family: "GT Haptik Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0 0 5px 0;
+      padding: 0;
+      text-transform: uppercase;
+   }
+   &__subtitle {
+      //@include font(21px, 1.2, #000, 700);
+      margin: 0 0 7px 0;
+      padding: 0;
+   }
+   &__author {
+      //@include font(16px, 1.2, #000, 400);
+   }
+}
