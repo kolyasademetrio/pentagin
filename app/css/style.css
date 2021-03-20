@@ -911,23 +911,19 @@ img {
   }
   .footer__list {
     overflow: hidden;
-    -webkit-transition: height 0.5s ease-out 0s;
-    -o-transition: height 0.5s ease-out 0s;
-    transition: height 0.5s ease-out 0s;
+    -webkit-transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    -o-transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    margin: 0;
+    padding: 0;
+    max-height: 0;
   }
   .footer__list.active {
-    -webkit-transition: height 0.5s ease-out 0s;
-    -o-transition: height 0.5s ease-out 0s;
-    transition: height 0.5s ease-out 0s;
-  }
-  .footer__list[data-collapsed="true"] {
-    margin: 0;
-    height: 0;
-  }
-  .footer__list[data-collapsed="false"], .footer__list[data-collapsed="true"] {
-    -webkit-transition: height 0.5s ease-out 0s;
-    -o-transition: height 0.5s ease-out 0s;
-    transition: height 0.5s ease-out 0s;
+    -webkit-transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    -o-transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    padding-bottom: 9px;
+    max-height: 9999px;
   }
   .footer__list-item {
     margin: 0;

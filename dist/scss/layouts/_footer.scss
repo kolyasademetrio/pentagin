@@ -138,19 +138,14 @@
       }
       &__list {
          overflow: hidden;
-         transition: height 0.5s ease-out 0s;
-         //padding-bottom: ($top-padding-menu-list-mobile - $bottom-padding-menu-list-item-mobile);
+         transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+         margin: 0;
+         padding: 0;
+         max-height: 0;
          &.active {
-            transition: height 0.5s ease-out 0s;
-         }
-         &[data-collapsed="true"] {
-            margin: 0;
-            //transition: height 0.5s ease-out 0s;
-            height: 0;
-         }
-         &[data-collapsed="false"],
-         &[data-collapsed="true"] {
-            transition: height 0.5s ease-out 0s;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+            padding-bottom: ($top-padding-menu-list-mobile - $bottom-padding-menu-list-item-mobile);
+            max-height: 9999px;
          }
       }
       &__list-item {
