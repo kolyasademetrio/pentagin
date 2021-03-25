@@ -684,7 +684,7 @@ img {
 
 .slider__item {
   position: relative;
-  max-width: 405px;
+  width: 405px;
 }
 
 .slider__link {
@@ -721,7 +721,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .slider__item {
-    max-width: 320px;
+    width: 300px;
   }
 }
 
@@ -743,6 +743,43 @@ img {
           align-items: space-between;
   padding-top: 47px;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+  .wrapper__inner-row_footer-bottom {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper__inner-row_footer-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer__list-item, .footer__legal-item {
+  font-family: "opensans-regular", sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #6A6F72;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.footer__list-item a, .footer__legal-item a {
+  color: #6A6F72;
 }
 
 .footer {
@@ -809,6 +846,23 @@ img {
 .footer__item-title {
   padding: 0;
   margin: 0 0 23px 0;
+  position: relative;
+}
+
+.footer__item-title:after {
+  content: '';
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+      -ms-transform: translate(0, -50%) rotate(45deg);
+          transform: translate(0, -50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  border: 2px solid #6A6F72;
+  border-top: none;
+  border-left: none;
 }
 
 .footer__list-item {
@@ -822,6 +876,10 @@ img {
   margin: 0 0 16px 0;
 }
 
+.footer__logo_mobile {
+  display: none;
+}
+
 .footer__logo-img {
   width: 137px;
 }
@@ -833,6 +891,10 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.footer__socials_mobile {
+  display: none;
 }
 
 .footer__socials-item {
@@ -862,8 +924,10 @@ img {
 
 @media screen and (max-width: 1150px) {
   .footer__socials {
-    display: block;
     margin-left: 1px;
+  }
+  .footer__socials_desktop {
+    display: block;
   }
   .footer__socials-item {
     margin-right: 0;
@@ -882,6 +946,9 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .footer__lang-wrap {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -894,6 +961,18 @@ img {
   }
   .footer__item_desk {
     display: none;
+  }
+  .footer__logo_desk {
+    display: none;
+  }
+  .footer__logo_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 30px;
   }
   .footer__items {
     padding-top: 0;
@@ -908,6 +987,9 @@ img {
     padding: 24px 0;
     margin: 0;
     cursor: pointer;
+  }
+  .footer__item-title:after {
+    display: block;
   }
   .footer__list {
     overflow: hidden;
@@ -928,6 +1010,52 @@ img {
   .footer__list-item {
     margin: 0;
     padding: 0 0 15px;
+  }
+  .footer__socials {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: 25px;
+  }
+  .footer__socials_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer__socials_desk {
+    display: none;
+  }
+  .footer__socials-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+  }
+  .footer__legal-list {
+    display: block;
+  }
+  .footer__legal-wrap {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .footer__legal-item {
+    text-align: center;
+    margin-right: 0;
+    font-size: 13px;
+  }
+  .footer__legal-item_desk {
+    display: none;
+  }
+  .footer__legal-item_copyright {
+    margin-bottom: 10px;
+    color: #000;
+  }
+  .footer__lang-wrap {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
 }
 

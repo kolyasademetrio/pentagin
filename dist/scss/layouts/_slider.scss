@@ -10,7 +10,7 @@
    }
    &__item {
       position: relative;
-      max-width: 405px;
+      width: 405px;
    }
    &__link {
       background-position: center;
@@ -47,7 +47,7 @@
    }
    @media screen and (max-width: $tablet-media) {
       &__item {
-         max-width: 320px;
+         width: 300px;
       }
    }
 }
