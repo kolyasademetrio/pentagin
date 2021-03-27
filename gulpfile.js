@@ -19,6 +19,9 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat'); // Подключаем gulp-concat (для конкатенации файлов)
 const cleanCSS = require('gulp-clean-css');// Подключаем пакет для минификации CSS
 
+const devip = require('dev-ip');
+devip(); // [ "192.168.1.76", "192.168.1.80" ] or false if nothing found (ie, offline user)
+
 
 //const rename       = require('gulp-rename'); // Подключаем библиотеку для переименования файлов
 //const imagemin     = require('gulp-imagemin'); // Подключаем библиотеку для работы с изображениями
