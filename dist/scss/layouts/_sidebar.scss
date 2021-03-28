@@ -1,3 +1,85 @@
 .sidebar {
+   padding: $main-content-top-padding 0 0 0;
    flex: 0 0 262px;
+
+   @media screen and (max-width: $desktop-media) {
+   }
+   @media screen and (max-width: $tablet-big-media) {
+   }
+   @media screen and (max-width: $tablet-media) {
+      flex-basis: 100%;
+   }
+   @media screen and (max-width: $mobile-media) {
+   }
+}
+
+$sidebar-elem-padding-left: 15px;
+$sidebar-elem-padding-top: 6px;
+%input-focus {
+   outline: none;
+   border-color: #66afe9;
+   box-shadow: 0 0 4px #66afe9;
+}
+
+%input-styles {
+   display: block;
+   width: 100%;
+   border: 1px solid $input-border-color;
+   border-radius: $input-border-radius;
+   outline: none;
+   font-weight: bold;
+   font-size: 13px;
+   padding: 8px 15px;
+   &::placeholder {
+      font-weight: bold;
+      font-size: 13px;
+   }
+   &:focus {
+      @extend %input-focus;
+   }
+}
+
+$search-btn-width: 40px;
+.search {
+   margin: 0 0 15px;
+   &__input {
+      padding-right: 40px;
+      @extend %input-styles;
+   }
+   &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      background: transparent url("../images/icons/search.png") 50% 50% no-repeat;
+   }
+}
+
+.keywords {
+   .tokenfield .token-input {
+      @extend %input-styles;
+      height: auto;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      top: -40px;
+   }
+
+   .tokenfield.form-control {
+      padding-top: 40px;
+      position: relative;
+   }
+
+   &__clearall {
+      position: absolute;
+      bottom: $sidebar-elem-padding-top;
+      right: $sidebar-elem-padding-left;
+      color: $alert-color;
+      font-size: 13px;
+      line-height: 1;
+   }
 }

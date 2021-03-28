@@ -9,6 +9,9 @@ $alert-color: #ff0000;
 $base-blue-color: #2c87ce;
 $base-green-color: #8ae6cf;
 $light-color: #d8dae0;
+$input-border-color: #b6b6b6;
+
+$input-border-radius: 3px;
 
 $base-ff: "opensans-regular", sans-serif;
 $custom-ff: "oswald-bold", sans-serif;
@@ -33,6 +36,20 @@ $desktop-media: 1150px;
 $tablet-big-media: 992px;
 $tablet-media: 768px;
 $mobile-media: 470px;
+
+$main-content-top-padding: 33px;
+@media screen and (max-width: $desktop-media) {
+   $main-content-top-padding: 33px;
+}
+@media screen and (max-width: $tablet-big-media) {
+   $main-content-top-padding: 23px;
+}
+@media screen and (max-width: $tablet-media) {
+   $main-content-top-padding: 13px;
+}
+@media screen and (max-width: $mobile-media) {
+   $main-content-top-padding: 10px;
+}
 
 %link-transition-hover-alert-color {
    transition: $default-transition;

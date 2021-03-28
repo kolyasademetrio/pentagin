@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 
    const headerMenuBtn = document.querySelector('.js-header-menu-btn');
-   if (headerMenuBtn) {
+   if (headerMenuBtn.length) {
       headerMenuBtn.addEventListener('click', menuToggle(e, 'header', 'header__menu', 'active'));
    }
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
    $('.js-slider-main').slick({
       centerMode: true,
       centerPadding: '0px',
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       infinite: true,
       cssEase: 'linear',
@@ -65,4 +65,12 @@ $(document).ready(function () {
          }
       ]
    });
+
+   $('#tokenfield').tokenfield({
+      autocomplete: {
+        source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
+        delay: 100
+      },
+      showAutocompleteOnFocus: true
+    })
 });
