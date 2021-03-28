@@ -67,7 +67,7 @@ function html() {
 }
 
 function js() {
-   return src(['dist/libs/jquery-3.6.0.min.js', 'dist/libs/**/*.js', 'dist/**/*.js'])
+   return src(['dist/libs/jquery-3.0.0.min.js', 'dist/libs/jquery-migrate-3.0.0.min.js', 'dist/libs/**/*.js', 'dist/**/*.js'])
       .pipe(sourcemaps.init())
       // .pipe(uglify())
       .pipe(concat('main.min.js'))

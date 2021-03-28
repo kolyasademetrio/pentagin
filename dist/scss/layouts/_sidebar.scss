@@ -40,18 +40,48 @@ $sidebar-elem-padding-top: 6px;
 
 .search {
    margin: 0 0 15px;
-   &__input {
+
+   .tokenfield.form-control {
+      position: relative;
+      margin-top: 48px;
+
+      border: 1px solid #b6b6b6;
+      border-radius: 3px;
+      padding: 8px 15px 3px;
+
+      &.focus {
+         border-color: #66afe9;
+         box-shadow: 0 0 4px #66afe9;
+         outline: none;
+      }
+   }
+
+   #tokenfield-tokenfield {
+      @extend %input-styles;
+      height: auto;
+      width: 100% !important;
       padding: 8px 40px 8px 15px;
       background: transparent url("../images/icons/search.png") 95% 50% no-repeat;
-      @extend %input-styles;
+      border: 1px solid #b6b6b6;
+      border-radius: 3px;
+
+      position: absolute;
+      top: -48px;
+      left: 0;
+      right: 0;
+   }
+}
+
+.ui-autocomplete .ui-menu-item {
+   padding-left: 5px;
+   padding-right: 5px;
+   .ui-corner-all {
+      padding-left: 5px;
+      padding-right: 5px;
    }
 }
 
 .keywords {
-   .tokenfield .token-input {
-      @extend %input-styles;
-   }
-
    &__clearall {
       position: absolute;
       bottom: $sidebar-elem-padding-top;
