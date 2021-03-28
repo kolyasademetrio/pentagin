@@ -776,7 +776,6 @@ img {
   outline: none;
   font-weight: bold;
   font-size: 13px;
-  padding: 8px 15px;
 }
 
 .search__input::-webkit-input-placeholder, .keywords .tokenfield .token-input::-webkit-input-placeholder {
@@ -809,32 +808,8 @@ img {
 }
 
 .search__input {
-  padding-right: 40px;
-}
-
-.search:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 40px;
-  background: transparent url("../images/icons/search.png") 50% 50% no-repeat;
-}
-
-.keywords .tokenfield .token-input {
-  height: auto;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  top: -40px;
-}
-
-.keywords .tokenfield.form-control {
-  padding-top: 40px;
-  position: relative;
+  padding: 8px 40px 8px 15px;
+  background: transparent url("../images/icons/search.png") 95% 50% no-repeat;
 }
 
 .keywords__clearall {
