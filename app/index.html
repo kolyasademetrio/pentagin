@@ -173,21 +173,19 @@
 								<div class="search">
 									<input class="search__input" type="text" placeholder="What are we looking for?" id="tokenfield">
 								</div>
-								<div class="keywords">
-									<ul class="keywords__list">
-										<li class="keywords__item">
-											<div class="keywords__text">mandalorian</div>
-											<div class="keywords__remove">&#10006;</div>
-										</li>
-									</ul>
-									<div class="keywords__clearall">Clear all</div>
-								</div>
+								<section class="words-cloud-wrap">
+									<h5 class="words-cloud-title">Popular tags:</h5>
+									<div class="words-cloud">
+									</div>
+								</section>
 							</aside>
 							<div class="page-content">
 								<section class="filters">
 									<ul class="filters__list">
 										<li class="filters__item">
-											<i class="filters__icon"></i>
+											<i class="filters__icon filter">
+												<img class="filters__img" src="images/icons/filter.svg" alt="">
+											</i>
 											<fieldset class="filters__filter">
 												<select class="filters__select" name="lang" id="lang">
 													<option class="filters__option" value="uk">Most popular now</option>
@@ -197,7 +195,9 @@
 											</fieldset>
 										</li>
 										<li class="filters__item">
-											<i class="filters__icon"></i>
+											<i class="filters__icon eye">
+												<img class="filters__img" src="images/icons/eye.svg" alt="">
+											</i>
 											<fieldset class="filters__filter">
 												<label class="filters__label">
 													<input class="filters__radio" type="radio" name="type">
@@ -210,7 +210,9 @@
 											</fieldset>
 										</li>
 										<li class="filters__item">
-											<i class="filters__icon"></i>
+											<i class="filters__icon color">
+												<img class="filters__img" src="images/icons/color.svg" alt="">
+											</i>
 											<fieldset class="filters__filter">
 												<label class="filters__label">
 													<input class="filters__radio" type="radio" name="color" checked>

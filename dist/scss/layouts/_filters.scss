@@ -24,7 +24,17 @@
       background-color: #fff;
       border-radius: 50%;
       box-shadow: 0 0 1px #e1e6ea;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
+   &__img {
+      width: 80%;
+      .filter & {
+         width: 60%;
+      }
+   }
+   
    &__filter {
       display: flex;
    }
