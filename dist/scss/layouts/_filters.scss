@@ -88,4 +88,10 @@
    &__option {
       font-size: 13px;
    }
+   @media screen and (max-width: $tablet-media) {
+      & {
+         display: flex;
+         justify-content: center;
+      }
+   }
 }

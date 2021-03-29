@@ -1,20 +1,34 @@
 .sidebar {
    padding: $main-content-top-padding 0 0 0;
    flex: 0 0 262px;
-
+   &__delimiter {
+      margin: 0 auto 15px;
+      width: 80%;
+      height: 1px;
+      line-height: 1px;
+      background-color: $input-border-color;
+      opacity: 0.5;
+   }
    @media screen and (max-width: $desktop-media) {
    }
    @media screen and (max-width: $tablet-big-media) {
    }
    @media screen and (max-width: $tablet-media) {
       flex-basis: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      &__delimiter {
+         order: 3;
+         width: 100%;
+      }
    }
    @media screen and (max-width: $mobile-media) {
    }
 }
 
 $sidebar-elem-padding-left: 15px;
-$sidebar-elem-padding-top: 6px;
+$sidebar-elem-padding-top: 8px;
 %input-focus {
    outline: none;
    border-color: #66afe9;
@@ -39,51 +53,129 @@ $sidebar-elem-padding-top: 6px;
 }
 
 .search {
-   max-width: 300px;
+   max-width: 375px;
+   width: 100%;
    margin: 0 auto 15px;
 
-   .tokenfield.form-control {
-      position: relative;
-      margin-top: 48px;
-
-      border: 1px solid #b6b6b6;
-      border-radius: 3px;
-      padding: 8px 15px 3px;
-
-      &.focus {
-         border-color: #66afe9;
-         box-shadow: 0 0 4px #66afe9;
-         outline: none;
-      }
-   }
-
-   #tokenfield-tokenfield {
+   &__input {
       @extend %input-styles;
       height: auto;
       width: 100% !important;
-      padding: 8px 40px 8px 15px;
-      background: transparent url("../images/icons/search.png") 95% 50% no-repeat;
+      padding: $sidebar-elem-padding-top 40px $sidebar-elem-padding-top $sidebar-elem-padding-left;
+      background: transparent url("../images/icons/search.png") 97% 50% no-repeat;
       border: 1px solid #b6b6b6;
-      border-radius: 3px;
+   }
 
-      position: absolute;
-      top: -48px;
-      left: 0;
-      right: 0;
+   &__footer {
+      display: none;
+      height: 26px;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 $sidebar-elem-padding-left;
+      color: $alert-color;
+   }
+   &__clear {
+      cursor: pointer;
+   }
+   &__tokens {
+      margin: 10px 0 0;
+      border: 1px solid $input-border-color;
+      border-radius: $input-border-radius;
+      outline: none;
+      font-weight: bold;
+      font-size: 13px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &.active {
+         @extend %input-focus;
+         .search__footer {
+            display: flex;
+         }
+      }
+   }
+   &__tag {
+      line-height: 16px;
+      font-size: 14px;
+      font-weight: normal;
+      display: inline-block;
+      margin: 0 5px 0 0;
+   }
+   &__remove-token {
+      color: $light-color;
+      font-size: 9px;
+      margin: 0 0 0 8px;
+      line-height: inherit;
+      position: relative;
+      top: -1px;
+      cursor: pointer;
+   }
+   &__tokens-inner {
+      padding: $sidebar-elem-padding-top $sidebar-elem-padding-left;
+   }
+
+   // .tokenfield.form-control {
+   //    position: relative;
+   //    margin-top: 48px;
+
+   //    border: 1px solid #b6b6b6;
+   //    border-radius: 3px;
+   //    padding: 8px 15px 3px;
+
+   //    &.focus {
+   //       border-color: #66afe9;
+   //       box-shadow: 0 0 4px #66afe9;
+   //       outline: none;
+   //    }
+   // }
+
+   // #tokenfield-tokenfield {
+   //    @extend %input-styles;
+   //    height: auto;
+   //    width: 100% !important;
+   //    padding: 8px 40px 8px 15px;
+   //    background: transparent url("../images/icons/search.png") 95% 50% no-repeat;
+   //    border: 1px solid #b6b6b6;
+   //    border-radius: 3px;
+
+   //    position: absolute;
+   //    top: -48px;
+   //    left: 0;
+   //    right: 0;
+   // }
+
+   @media screen and (max-width: $tablet-media) {
+      order: 2;
+      &__tokens,
+      &__tokens.active {
+         position: relative;
+         margin-right: 70px;
+         .search__footer {
+            display: flex;
+            display: flex;
+            position: absolute;
+            right: -65px;
+            padding-right: 0;
+            padding-left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+         }
+      }
    }
 }
 
-.ui-autocomplete .ui-menu-item {
-   padding-left: 5px;
-   padding-right: 5px;
-   .ui-corner-all {
-      padding-left: 5px;
-      padding-right: 5px;
-   }
-}
+// .ui-autocomplete .ui-menu-item {
+//    padding-left: 5px;
+//    padding-right: 5px;
+//    .ui-corner-all {
+//       padding-left: 5px;
+//       padding-right: 5px;
+//    }
+// }
 
 .words-cloud.jqcloud {
-   height: 350px;
+   height: 130px;
    font-size: 10px;
    line-height: 1;
    color: #2ba0fd;
@@ -97,52 +189,43 @@ $sidebar-elem-padding-top: 6px;
    }
    .w10 {
       font-size: 350%;
-      color: #3d5a68;
    }
    .w9 {
       font-size: 325%;
-      color: #563225;
    }
    .w8 {
       font-size: 300%;
-      color: #dc7500;
    }
    .w7 {
       font-size: 275%;
-      color: #298c2d;
    }
    .w6 {
       font-size: 250%;
-      color: #0073d0;
    }
    .w5 {
       font-size: 225%;
-      color: #1c2e92;
    }
    .w4 {
       font-size: 200%;
-      color: #441794;
    }
    .w3 {
       font-size: 175%;
-      color: #79048d;
    }
    .w2 {
       font-size: 150%;
-      color: #c60040;
    }
    .w1 {
       font-size: 100%;
-      color: #d12013;
    }
    span {
       padding: 0;
+      color: #1a6381;
    }
    span:hover {
-      color: #0099b2;
+      color: #1a6381;
    }
    @media screen and (max-width: $tablet-media) {
-      height: 200px !important;
+      height: 130px !important;
    }
 }
 .words-cloud-title {
@@ -152,4 +235,7 @@ $sidebar-elem-padding-top: 6px;
    @media screen and (max-width: $tablet-media) {
       display: none;
    }
+}
+.words-cloud-wrap {
+   order: 1;
 }

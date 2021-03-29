@@ -3,5 +3,6 @@
    padding: $main-content-top-padding 0 0 30px;
    @media screen and (max-width: $tablet-media) {
       padding-left: 0;
+      padding-top: 10px;
    }
 }
