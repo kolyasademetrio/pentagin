@@ -2,7 +2,7 @@
    
    <section class="filters">
       <ul class="filters__list">
-         <li class="filters__item">
+         <li class="filters__item filters__item_filter">
             <i class="filters__icon filter">
                <img class="filters__img" src="images/icons/filter.svg" alt="">
             </i>
@@ -14,44 +14,42 @@
                </select>
             </fieldset>
          </li>
-         <li class="filters__item">
+         <li class="filters__item filters__item_eye">
             <i class="filters__icon eye">
                <img class="filters__img" src="images/icons/eye.svg" alt="">
             </i>
             <fieldset class="filters__filter">
-               <label class="filters__label">
+               <select class="filters__select" name="art" id="art">
+                  <option class="filters__option" value="photo">Photo</option>
+                  <option class="filters__option" value="artwork">Artwork</option>
+               </select>
+               <!-- <label class="filters__label">
                   <input class="filters__radio" type="radio" name="type">
                   <span class="filters__checkmark">Photo</span>
                </label>
                <label class="filters__label">
                   <input class="filters__radio" type="radio" name="type" checked>
                   <span class="filters__checkmark">Artwork</span>
-               </label>
+               </label> -->
             </fieldset>
          </li>
-         <li class="filters__item">
+         <li class="filters__item filters__item_color">
             <i class="filters__icon color">
                <img class="filters__img" src="images/icons/color.svg" alt="">
             </i>
             <fieldset class="filters__filter">
-               <label class="filters__label">
-                  <input class="filters__radio" type="radio" name="color" checked>
-                  <span class="filters__checkmark">All</span>
-               </label>
-               <label class="filters__label">
-                  <input class="filters__radio" type="radio" name="color">
-                  <span class="filters__checkmark">Black</span>
-               </label>
-               <label class="filters__label">
-                  <input class="filters__radio" type="radio" name="color">
-                  <span class="filters__checkmark">White</span>
-               </label>
+               <select class="filters__select" name="color" id="color">
+                  <option class="filters__option" value="all">All</option>
+                  <option class="filters__option" value="black">Black</option>
+                  <option class="filters__option" value="white">White</option>
+               </select>
             </fieldset>
          </li>
       </ul>
    </section>
 
    <section class="goods">
+      <h2 class="goods__title">Recommendation for you</h2>
       <ul class="goods__list">
          <li class="goods__item">
             <a href="" class="goods__item-inner">

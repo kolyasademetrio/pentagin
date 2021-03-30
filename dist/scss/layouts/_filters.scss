@@ -92,6 +92,47 @@
       & {
          display: flex;
          justify-content: center;
+         &__select {
+            width: 69px;
+            height: 43px;
+            padding: 0;
+            margin: 0;
+            outline: none;
+            color: transparent;
+            background-position: 50%;
+            background-size: contain;
+            &:focus {
+               outline: none;
+            }
+         }
+         &__list {
+            flex-wrap: nowrap;
+            justify-content: center;
+         }
+         &__item {
+            background-color: transparent;
+            border-color: transparent;
+            margin: 0 8px;
+            height: auto;
+            &.filters__item_filter .filters__select {
+               background-image: url('../images/icons/filter.svg');
+               width: 43px;
+            }
+            &.filters__item_eye .filters__select {
+               background-image: url('../images/icons/eye.svg');
+               background-size: 100% auto;
+            }
+            &.filters__item_color .filters__select {
+               background-image: url('../images/icons/color.svg');
+               width: 43px;
+            }
+         }
+         &__icon {
+            display: none;
+         }
+         &__option {
+            color: $base-fc;
+         }
       }
    }
 }
