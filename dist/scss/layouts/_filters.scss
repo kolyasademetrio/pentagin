@@ -10,6 +10,7 @@
       margin: 0 0 10px 0;
       border-bottom: 1px solid $input-border-color;
       border-top: 1px solid $input-border-color;
+      width: 100%;
    }
    &__item {
       background-color: #eaedf0;
@@ -21,72 +22,118 @@
       align-items: center;
       margin: 0 5% 0 0;
 
-
-      @media screen and (min-width: $tablet-media) {
-         &.filters__item_selectric {
-            position: relative;
-            border-radius: 0;
+      &.filters__item_selectric {
+         position: relative;
+         border-radius: 0;
+         border: 0;
+         background-color: transparent;
+         .selectric,
+         .button {
             border: 0;
             background-color: transparent;
-            .selectric, .button {
-               border: 0;
-               background-color: transparent;
+         }
+         .button {
+            height: $filter-height;
+            width: 25px;
+            color: #000;
+            &:after {
+               border-top-color: #000;
             }
-            .button {
-               height: $filter-height;
-               width: 25px;
-               color: #000;
-               &:after {
-                  border-top-color: #000;
+         }
+         .label {
+            margin-right: 25px;
+            margin-left: 30px;
+            color: #000;
+            font-size: 15px;
+         }
+         .filters__icon {
+            position: absolute;
+            left: 0;
+            width: 35px;
+            height: 35px;
+            &.filter {
+               & + .filters__filter .label {
+                  margin-left: 58px;
                }
             }
-            .label {
-               margin-right: 25px;
-               margin-left: 30px;
-               color: #000;
-               font-size: 15px;
-            }
-            .filters__icon {
-               position: absolute;
-               left: 0;
-               width: 35px;
-               height: 35px;
-               &.filter {
-                  & + .filters__filter .label {
-                     margin-left: 58px;
-                  }
-               }
-               &.eye {
-                  width: 55px;
-                  & + .filters__filter .label {
-                     margin-left: 74px;
-                  }
-               }
-               &.color {
-                  & + .filters__filter .label {
-                     margin-left: 47px;
-                  }
+            &.eye {
+               width: 55px;
+               & + .filters__filter .label {
+                  margin-left: 74px;
                }
             }
-            .filters__img {
-               width: 100%;
-            }
-            .selectric-items {
-               padding-top: 8px;
-               border: none;
-               background: transparent;
-               box-shadow: none;
-               li {
-                  margin-top: 2px;
-                  background-color: #000;
-                  color: #fff;
-                  font-size: 15px;
-                  &.highlighted {
-                     background-color: #191919;
-                  }
+            &.color {
+               & + .filters__filter .label {
+                  margin-left: 47px;
                }
             }
          }
+         .filters__img {
+            width: 100%;
+         }
+         .selectric-items {
+            padding-top: 8px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            li {
+               margin-top: 2px;
+               background-color: #000;
+               color: #fff;
+               font-size: 15px;
+               &.highlighted {
+                  background-color: #191919;
+               }
+            }
+         }
+         @media screen and (max-width: 1100px) {
+            .label,
+            .button {
+               display: none;
+            }
+            .selectric {
+               padding-left: 35px;
+               height: 35px;
+            }
+            .selectric-items {
+               min-width: 170px;
+            }
+            & {
+               padding: 0;
+               margin: 0 15px;
+               width: 70px;
+               &.filters__item_filter,
+               &.filters__item_color,
+               &.filters__item_eye {
+                  flex-shrink: 0;
+               }
+               &.filters__item_filter,
+               &.filters__item_color {
+                  width: 35px;
+               }
+               &.filters__item_eye {
+                  width: 55px;
+                  .filters__filter {
+                     width: 55px;
+                  }
+               }
+               .filters__icon {
+                  // left: 50%;
+                  // transform: translate(-50%, 0);
+                  &.eye {
+                     width: 55px;
+                  }
+               }
+               .filters__filter {
+                  position: absolute;
+                  // left: 50%;
+                  // transform: translate(-50%, 0);
+               }
+            }
+         }
+      }
+
+      @media screen and (min-width: 1101px) {
          &.filters__item_selectric-pseudo-radio {
             .selectric {
                display: none;
@@ -107,7 +154,7 @@
                         background-color: transparent;
                         color: #000;
                      }
-                   }
+                  }
                }
             }
             .filters__icon.eye + .filters__filter .selectric-items {
@@ -119,7 +166,7 @@
          }
       }
    }
-   
+
    &__icon {
       width: $filter-height - ($filters-indent * 2);
       height: $filter-height - ($filters-indent * 2);
@@ -136,7 +183,7 @@
          width: 60%;
       }
    }
-   
+
    &__filter {
       display: flex;
    }
@@ -217,15 +264,15 @@
             margin: 0 15px;
             height: auto;
             &.filters__item_filter .filters__select {
-               background-image: url('../images/icons/filter.svg');
+               background-image: url("../images/icons/filter.svg");
                width: 43px;
             }
             &.filters__item_eye .filters__select {
-               background-image: url('../images/icons/eye.svg');
+               background-image: url("../images/icons/eye.svg");
                background-size: 100% auto;
             }
             &.filters__item_color .filters__select {
-               background-image: url('../images/icons/color.svg');
+               background-image: url("../images/icons/color.svg");
                width: 43px;
             }
          }

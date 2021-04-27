@@ -1098,6 +1098,7 @@ img {
   margin: 0 0 10px 0;
   border-bottom: 1px solid #e0e5eb;
   border-top: 1px solid #e0e5eb;
+  width: 100%;
 }
 
 .filters__item {
@@ -1115,68 +1116,121 @@ img {
   margin: 0 5% 0 0;
 }
 
-@media screen and (min-width: 768px) {
-  .filters__item.filters__item_selectric {
-    position: relative;
-    border-radius: 0;
-    border: 0;
-    background-color: transparent;
-  }
-  .filters__item.filters__item_selectric .selectric, .filters__item.filters__item_selectric .button {
-    border: 0;
-    background-color: transparent;
-  }
+.filters__item.filters__item_selectric {
+  position: relative;
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.filters__item.filters__item_selectric .selectric,
+.filters__item.filters__item_selectric .button {
+  border: 0;
+  background-color: transparent;
+}
+
+.filters__item.filters__item_selectric .button {
+  height: 40px;
+  width: 25px;
+  color: #000;
+}
+
+.filters__item.filters__item_selectric .button:after {
+  border-top-color: #000;
+}
+
+.filters__item.filters__item_selectric .label {
+  margin-right: 25px;
+  margin-left: 30px;
+  color: #000;
+  font-size: 15px;
+}
+
+.filters__item.filters__item_selectric .filters__icon {
+  position: absolute;
+  left: 0;
+  width: 35px;
+  height: 35px;
+}
+
+.filters__item.filters__item_selectric .filters__icon.filter + .filters__filter .label {
+  margin-left: 58px;
+}
+
+.filters__item.filters__item_selectric .filters__icon.eye {
+  width: 55px;
+}
+
+.filters__item.filters__item_selectric .filters__icon.eye + .filters__filter .label {
+  margin-left: 74px;
+}
+
+.filters__item.filters__item_selectric .filters__icon.color + .filters__filter .label {
+  margin-left: 47px;
+}
+
+.filters__item.filters__item_selectric .filters__img {
+  width: 100%;
+}
+
+.filters__item.filters__item_selectric .selectric-items {
+  padding-top: 8px;
+  border: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.filters__item.filters__item_selectric .selectric-items li {
+  margin-top: 2px;
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+}
+
+.filters__item.filters__item_selectric .selectric-items li.highlighted {
+  background-color: #191919;
+}
+
+@media screen and (max-width: 1100px) {
+  .filters__item.filters__item_selectric .label,
   .filters__item.filters__item_selectric .button {
-    height: 40px;
-    width: 25px;
-    color: #000;
+    display: none;
   }
-  .filters__item.filters__item_selectric .button:after {
-    border-top-color: #000;
-  }
-  .filters__item.filters__item_selectric .label {
-    margin-right: 25px;
-    margin-left: 30px;
-    color: #000;
-    font-size: 15px;
-  }
-  .filters__item.filters__item_selectric .filters__icon {
-    position: absolute;
-    left: 0;
-    width: 35px;
+  .filters__item.filters__item_selectric .selectric {
+    padding-left: 35px;
     height: 35px;
   }
-  .filters__item.filters__item_selectric .filters__icon.filter + .filters__filter .label {
-    margin-left: 58px;
+  .filters__item.filters__item_selectric .selectric-items {
+    min-width: 170px;
+  }
+  .filters__item.filters__item_selectric {
+    padding: 0;
+    margin: 0 15px;
+    width: 70px;
+  }
+  .filters__item.filters__item_selectric.filters__item_filter, .filters__item.filters__item_selectric.filters__item_color, .filters__item.filters__item_selectric.filters__item_eye {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .filters__item.filters__item_selectric.filters__item_filter, .filters__item.filters__item_selectric.filters__item_color {
+    width: 35px;
+  }
+  .filters__item.filters__item_selectric.filters__item_eye {
+    width: 55px;
+  }
+  .filters__item.filters__item_selectric.filters__item_eye .filters__filter {
+    width: 55px;
   }
   .filters__item.filters__item_selectric .filters__icon.eye {
     width: 55px;
   }
-  .filters__item.filters__item_selectric .filters__icon.eye + .filters__filter .label {
-    margin-left: 74px;
+  .filters__item.filters__item_selectric .filters__filter {
+    position: absolute;
   }
-  .filters__item.filters__item_selectric .filters__icon.color + .filters__filter .label {
-    margin-left: 47px;
-  }
-  .filters__item.filters__item_selectric .filters__img {
-    width: 100%;
-  }
-  .filters__item.filters__item_selectric .selectric-items {
-    padding-top: 8px;
-    border: none;
-    background: transparent;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  .filters__item.filters__item_selectric .selectric-items li {
-    margin-top: 2px;
-    background-color: #000;
-    color: #fff;
-    font-size: 15px;
-  }
-  .filters__item.filters__item_selectric .selectric-items li.highlighted {
-    background-color: #191919;
-  }
+}
+
+@media screen and (min-width: 1101px) {
   .filters__item.filters__item_selectric-pseudo-radio .selectric {
     display: none;
   }
