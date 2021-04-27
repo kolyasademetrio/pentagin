@@ -2,12 +2,24 @@
    padding: $main-content-top-padding 0 0 0;
    flex: 0 0 262px;
    &__delimiter {
-      margin: 0 auto 15px;
-      width: 80%;
+      margin: 0 auto 20px;
+      width: 100%;
       height: 1px;
       line-height: 1px;
       background-color: $input-border-color;
       opacity: 0.5;
+      &.bMar-0 {
+         margin-bottom: 0;
+      }
+      &.bMar-5 {
+         margin-bottom: 5px;
+      }
+      &.tMar-10 {
+         margin-top: 10px;
+      }
+      &.tMar-5 {
+         margin-top: 5px;
+      }
    }
    @media screen and (max-width: $desktop-media) {
    }
@@ -28,11 +40,11 @@
 }
 
 $sidebar-elem-padding-left: 15px;
-$sidebar-elem-padding-top: 8px;
+$sidebar-elem-padding-top: 10px;
 %input-focus {
    outline: none;
-   border-color: #66afe9;
-   box-shadow: 0 0 4px #66afe9;
+   // border-color: #66afe9;
+   // box-shadow: 0 0 4px #66afe9;
 }
 
 %input-styles {
@@ -55,7 +67,7 @@ $sidebar-elem-padding-top: 8px;
 .search {
    max-width: 375px;
    width: 100%;
-   margin: 0 auto 15px;
+   margin: 0 auto 17px;
 
    &__input {
       @extend %input-styles;
@@ -64,6 +76,7 @@ $sidebar-elem-padding-top: 8px;
       padding: $sidebar-elem-padding-top 40px $sidebar-elem-padding-top $sidebar-elem-padding-left;
       background: transparent url("../images/icons/search.png") 97% 50% no-repeat;
       border: 1px solid #b6b6b6;
+      border-color: transparent;
    }
 
    &__footer {
@@ -78,8 +91,8 @@ $sidebar-elem-padding-top: 8px;
       cursor: pointer;
    }
    &__tokens {
-      margin: 10px 0 0;
-      border: 1px solid $input-border-color;
+      margin: 0px 0 0;
+      //border: 1px solid $input-border-color;
       border-radius: $input-border-radius;
       outline: none;
       font-weight: bold;

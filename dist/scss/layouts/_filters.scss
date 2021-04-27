@@ -1,5 +1,5 @@
 .filters {
-   $filter-height: 36px;
+   $filter-height: 40px;
    $filters-indent: 4px;
    $filters-items-indent: 7px;
    &__list {
@@ -7,6 +7,9 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: wrap;
+      margin: 0 0 10px 0;
+      border-bottom: 1px solid $input-border-color;
+      border-top: 1px solid $input-border-color;
    }
    &__item {
       background-color: #eaedf0;
@@ -16,8 +19,107 @@
       border-radius: $filter-height / 2;
       display: flex;
       align-items: center;
-      margin: 0 5% 10px 0;
+      margin: 0 5% 0 0;
+
+
+      @media screen and (min-width: $tablet-media) {
+         &.filters__item_selectric {
+            position: relative;
+            border-radius: 0;
+            border: 0;
+            background-color: transparent;
+            .selectric, .button {
+               border: 0;
+               background-color: transparent;
+            }
+            .button {
+               height: $filter-height;
+               width: 25px;
+               color: #000;
+               &:after {
+                  border-top-color: #000;
+               }
+            }
+            .label {
+               margin-right: 25px;
+               margin-left: 30px;
+               color: #000;
+               font-size: 15px;
+            }
+            .filters__icon {
+               position: absolute;
+               left: 0;
+               width: 35px;
+               height: 35px;
+               &.filter {
+                  & + .filters__filter .label {
+                     margin-left: 58px;
+                  }
+               }
+               &.eye {
+                  width: 55px;
+                  & + .filters__filter .label {
+                     margin-left: 74px;
+                  }
+               }
+               &.color {
+                  & + .filters__filter .label {
+                     margin-left: 47px;
+                  }
+               }
+            }
+            .filters__img {
+               width: 100%;
+            }
+            .selectric-items {
+               padding-top: 8px;
+               border: none;
+               background: transparent;
+               box-shadow: none;
+               li {
+                  margin-top: 2px;
+                  background-color: #000;
+                  color: #fff;
+                  font-size: 15px;
+                  &.highlighted {
+                     background-color: #191919;
+                  }
+               }
+            }
+         }
+         &.filters__item_selectric-pseudo-radio {
+            .selectric {
+               display: none;
+            }
+            .selectric-items {
+               display: block;
+               position: static;
+               z-index: 10;
+               padding-top: 0;
+               ul {
+                  display: flex;
+                  li {
+                     margin-top: 0;
+                     margin-right: 3px;
+                     padding-top: 4px;
+                     padding-bottom: 5px;
+                     &:not(.selected) {
+                        background-color: transparent;
+                        color: #000;
+                     }
+                   }
+               }
+            }
+            .filters__icon.eye + .filters__filter .selectric-items {
+               margin-left: 70px;
+            }
+            .filters__icon.color + .filters__filter .selectric-items {
+               margin-left: 48px;
+            }
+         }
+      }
    }
+   
    &__icon {
       width: $filter-height - ($filters-indent * 2);
       height: $filter-height - ($filters-indent * 2);
@@ -109,10 +211,10 @@
             flex-wrap: nowrap;
             justify-content: center;
          }
-         &__item {
+         &__item:not(.filters__item_selectric) {
             background-color: transparent;
             border-color: transparent;
-            margin: 0 8px;
+            margin: 0 15px;
             height: auto;
             &.filters__item_filter .filters__select {
                background-image: url('../images/icons/filter.svg');
@@ -127,12 +229,22 @@
                width: 43px;
             }
          }
-         &__icon {
-            display: none;
-         }
-         &__option {
-            color: $base-fc;
-         }
+         // .selectric-items {
+         //    display: none !important;
+         // }
+         // &__icon {
+         //    display: none;
+         // }
+         // .filters__item_selectric &__icon {
+         //    display: block;
+         //    position: static !important;
+         // }
+         // .filters__item_selectric .selectric {
+         //    display: none;
+         // }
+         // &__option {
+         //    color: $base-fc;
+         // }
       }
    }
 }

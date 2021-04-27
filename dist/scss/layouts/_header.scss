@@ -5,9 +5,9 @@
    border-bottom: 1px solid $light-color;
 
    
-   a {
-      @extend %link-transition-hover-alert-color;
-   }
+   // a {
+   //    @extend %link-transition-hover-alert-color;
+   // }
 
    &__logo {
       display: block;
@@ -24,7 +24,7 @@
 
    &__lang {
       margin-right: auto;
-      padding: 0 15px 0 30px;
+      padding: 0 15px 0 40px;
    }
 
    &__items {
@@ -92,7 +92,7 @@
       }
       &__lang {
          padding-right: 0;
-         padding-left: 15px;
+         padding-left: 25px;
       }
       &__menu-btn {
          z-index: 2;

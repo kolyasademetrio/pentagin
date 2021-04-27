@@ -104,4 +104,8 @@ $(document).ready(function () {
       //   });
       }
     });
+
+    if ( $('.filters__item_selectric .filters__select').length ) {
+      //  $('.filters__item_selectric .filters__select').selectric();
+    }
 });
