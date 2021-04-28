@@ -1,4 +1,5 @@
 .slider {
+   padding-top: 15px;
    &__list {
       opacity: 0;
       visibility: hidden;
@@ -19,7 +20,7 @@
       position: relative;
       margin: 0 7px;
       overflow: hidden;
-      border: 1px solid #d8dee1;
+      border: 1px solid $input-border-color;
    }
    &__link-inner {
       width: 100%;

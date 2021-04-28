@@ -44,7 +44,7 @@ img {
 }
 
 .content {
-   padding: 15px 0 0;
+   padding: 0;
 }
 
 .main-wrapper {
@@ -67,6 +67,7 @@ img {
       min-width: $min-width;
       padding: 0 15px;
       height: 100%;
+      flex-grow:1;
       &_full-width,
       &_full-width-noindent,
       &_full-width-big-indent {
@@ -84,6 +85,7 @@ img {
          }
       }
       
+
    }
    &__inner-row {
       height: 100%;
@@ -112,8 +114,7 @@ img {
    background-repeat: no-repeat;
    background-position: right 3px top 50%;
    background-size: 8px auto;
-   @include base-font();
-   color: $light-fc;
+   @include font(15px, 1.4, $light-fc, 400);
    /* Hide arrow icon in IE browsers */
    &::-ms-expand {
       display: none;

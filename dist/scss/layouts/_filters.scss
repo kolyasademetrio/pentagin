@@ -35,15 +35,15 @@
          .button {
             height: $filter-height;
             width: 25px;
-            color: #000;
+            color: $dark-fc;
             &:after {
-               border-top-color: #000;
+               border-top-color: $dark-fc;
             }
          }
          .label {
             margin-right: 25px;
             margin-left: 30px;
-            color: #000;
+            color: $dark-fc;
             font-size: 15px;
          }
          .filters__icon {
@@ -78,11 +78,13 @@
             box-shadow: none;
             li {
                margin-top: 2px;
-               background-color: #000;
+               background-color: $dark-fc;
                color: #fff;
                font-size: 15px;
-               &.highlighted {
-                  background-color: #191919;
+               &.highlighted,
+               &:hover {
+                  background-color: #d5d5d5;
+                  color: #444;
                }
             }
          }
@@ -152,7 +154,7 @@
                      padding-bottom: 5px;
                      &:not(.selected) {
                         background-color: transparent;
-                        color: #000;
+                        color: $dark-fc;
                      }
                   }
                }

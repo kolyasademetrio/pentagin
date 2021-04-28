@@ -27,52 +27,78 @@ document.addEventListener('DOMContentLoaded', function (e) {
 });
 
 $(document).ready(function () {
-   $('.js-slider-main').slick({
-      centerMode: true,
-      centerPadding: '30px',
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      infinite: true,
-      cssEase: 'linear',
-      prevArrow: "<button type='button' class='mfp-arrow mfp-arrow-left mfp-prevent-close'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-      nextArrow: "<button type='button' class='mfp-arrow mfp-arrow-right mfp-prevent-close'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-      responsive: [
-         {
-            breakpoint: 1200,
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 1,
-               infinite: true,
+   if ( $('.js-slider-main').length ) {
+      $('.js-slider-main').slick({
+         centerMode: true,
+         centerPadding: '30px',
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         infinite: true,
+         cssEase: 'linear',
+         prevArrow: "<button type='button' class='mfp-arrow mfp-arrow-left mfp-prevent-close'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+         nextArrow: "<button type='button' class='mfp-arrow mfp-arrow-right mfp-prevent-close'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+         responsive: [
+            {
+               breakpoint: 1200,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+               }
+            },
+            {
+               breakpoint: 1024,
+               settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+               }
+            },
+            {
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  centerMode: true,
+                  centerPadding: '30px',
+               }
+            },
+            {
+               breakpoint: 480,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: true,
+                  centerPadding: '30px',
+               }
             }
-         },
-         {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 3,
-               slidesToScroll: 1,
-               infinite: true,
-            }
-         },
-         {
-            breakpoint: 768,
-            settings: {
-               slidesToShow: 2,
-               slidesToScroll: 1,
-               centerMode: true,
-               centerPadding: '30px',
-            }
-         },
-         {
-            breakpoint: 480,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1,
-               centerMode: true,
-               centerPadding: '30px',
-            }
-         }
-      ]
-   });
+         ]
+      });
+   }
+
+   if ( $('.js-slider-good').length && $('.js-slider-good-nav').length ) {
+      $('.js-slider-good').slick({
+         centerMode: false,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         infinite: true,
+         fade: true,
+         cssEase: 'linear',
+         prevArrow: "<button type='button' class='mfp-arrow mfp-arrow-left mfp-prevent-close'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+         nextArrow: "<button type='button' class='mfp-arrow mfp-arrow-right mfp-prevent-close'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+      });
+
+      $('.js-slider-good-nav').slick({
+         centerMode: false,
+         slidesToShow: 2,
+         slidesToScroll: 1,
+         infinite: true,
+         cssEase: 'linear',
+         asNavFor: '.js-slider-good',
+         focusOnSelect: true
+      });
+   }
+   
 
    // $('#tokenfield').tokenfield({
    //    autocomplete: {
@@ -108,4 +134,6 @@ $(document).ready(function () {
     if ( $('.filters__item_selectric .filters__select').length ) {
        $('.filters__item_selectric .filters__select').selectric();
     }
+
+
 });

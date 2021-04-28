@@ -77,3 +77,26 @@
       url("../fonts/MrEavesXLModOT-Bold/MrEavesXLModOT-Bold.otf") format("opentype");
    font-weight: bold;
 }
+
+@font-face {
+   font-family: "rubik-regular";
+   src: url("../fonts/rubik-regular/rubik-regular.eot");
+   src: url("../fonts/rubik-regular/rubik-regular.woff2") format("woff2"),
+      url("../fonts/rubik-regular/rubik-regular.woff") format("woff"),
+      url("../fonts/rubik-regular/rubik-regular.ttf") format("truetype"),
+      url("../fonts/rubik-regular/rubik-regular.svg#rubik-regular") format("svg");
+   font-weight: normal;
+   font-style: normal;
+}
+
+
+@font-face {
+   font-family: "rubik-bold";
+   src: url("../fonts/rubik-bold/rubik-bold.eot");
+   src: url("../fonts/rubik-bold/rubik-bold.woff2") format("woff2"),
+      url("../fonts/rubik-bold/rubik-bold.woff") format("woff"),
+      url("../fonts/rubik-bold/rubik-bold.ttf") format("truetype"),
+      url("../fonts/rubik-bold/rubik-bold.svg#rubik-bold") format("svg");
+   font-weight: bold;
+   font-style: normal;
+}
