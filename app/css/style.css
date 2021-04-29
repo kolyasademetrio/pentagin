@@ -1603,10 +1603,29 @@ img {
 }
 
 .good__gallery {
-  -webkit-box-flex: 720px;
-      -ms-flex: 720px 0 1;
-          flex: 720px 0 1;
-  width: 720px;
+  -webkit-box-flex: 620px;
+      -ms-flex: 620px 0 0px;
+          flex: 620px 0 0;
+  width: 620px;
+  position: relative;
+  overflow: hidden;
+}
+
+.good__slider-nav {
+  width: 110px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  padding: 5px;
+}
+
+.good__slider-nav-item {
+  padding: 12px 0;
+}
+
+.good__slider-nav-item-inner {
+  border: 1px solid #e0e5eb;
+  background-color: #fff;
 }
 
 .good__info {

@@ -53,10 +53,28 @@
    justify-content: space-between;
    flex-grow: 1;
    &__gallery {
-      flex: 720px 0 1;
-      width: 720px;
+      flex: 620px 0 0;
+      width: 620px;
+      position: relative;
+      overflow: hidden;
+
+   }
+   &__slider-nav {
+      width: 110px;
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      padding: 5px;
+   }
+   &__slider-nav-item {
+      padding: 12px 0;
+   }
+   &__slider-nav-item-inner {
+      border: 1px solid $input-border-color;
+      background-color: #fff;
    }
    &__info {
       flex: 525px 0 0;
+
    }
 }

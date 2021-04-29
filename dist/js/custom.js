@@ -84,6 +84,7 @@ $(document).ready(function () {
          infinite: true,
          fade: true,
          cssEase: 'linear',
+         arrows: false,
          prevArrow: "<button type='button' class='mfp-arrow mfp-arrow-left mfp-prevent-close'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
          nextArrow: "<button type='button' class='mfp-arrow mfp-arrow-right mfp-prevent-close'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
       });
@@ -91,11 +92,13 @@ $(document).ready(function () {
       $('.js-slider-good-nav').slick({
          centerMode: false,
          slidesToShow: 2,
-         slidesToScroll: 1,
-         infinite: true,
+         slidesToScroll: 2,
          cssEase: 'linear',
          asNavFor: '.js-slider-good',
-         focusOnSelect: true
+         focusOnSelect: true,
+         vertical: true,
+         centerPadding: '30px',
+         arrows: false,
       });
    }
    
