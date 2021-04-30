@@ -138,5 +138,21 @@ $(document).ready(function () {
        $('.filters__item_selectric .filters__select').selectric();
     }
 
+    let optionsList = document.querySelectorAll('.js-options-list');
+    if (optionsList.length) {
+      optionsList.forEach(function(elem, index){
+         elem.addEventListener('click', function(e){
+
+            console.log(e.target.closest('.js-options-list'))
+
+            e.target.closest('.js-options-list').querySelectorAll('.js-option').forEach(function(elem, index){
+               elem.classList.remove('active');
+            });
+            e.target.closest('.js-option').classList.add('active');
+         });
+         
+      });
+    }
+
 
 });

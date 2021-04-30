@@ -33,7 +33,9 @@
       border: 1px solid transparent;
       margin: 0 0 0 5px;
       padding: 15px 20px;
-      &.active {
+      cursor: pointer;
+      &.active,
+      &:hover {
          border-color: $input-border-color;
          color: $dark-fc;
          background-color: #fcfcfc;
@@ -52,6 +54,7 @@
    display: flex;
    justify-content: space-between;
    flex-grow: 1;
+   padding: 20px 0 0 0;
    &__gallery {
       flex: 620px 0 0;
       width: 620px;
@@ -77,4 +80,29 @@
       flex: 525px 0 0;
 
    }
+   &__info-item-title {
+      color: $dark-fc;
+      font-size: 12px;
+   }
+   &__info-item-list {
+      color: $light-fc;
+      font-size: 24px;
+      font-family: "rubik-bold", sans-serif;
+      padding: 8px 0;
+      display: flex;
+      justify-content: flex-start;
+   }
+   &__info-item-list-item {
+      padding: 15px 22px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      margin: 0 5px 0 0;
+      &.active,
+      &:hover {
+         color: $dark-fc;
+         border-color: $input-border-color;
+         background-color: #fcfcfc;
+      }
+   }
+   
 }
