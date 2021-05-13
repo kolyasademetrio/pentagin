@@ -53,6 +53,7 @@
 .good {
    display: flex;
    justify-content: space-between;
+   align-items: flex-start;
    flex-grow: 1;
    padding: 20px 0 0 0;
    &__gallery {
@@ -80,6 +81,12 @@
       flex: 525px 0 0;
 
    }
+   &__info-item {
+      border-bottom: 1px solid $input-border-color;
+      &.pad-top_20 {
+         padding-top: 20px;
+      }
+   }
    &__info-item-title {
       color: $dark-fc;
       font-size: 12px;
@@ -91,6 +98,7 @@
       padding: 8px 0;
       display: flex;
       justify-content: flex-start;
+      flex-wrap: wrap;
    }
    &__info-item-list-item {
       padding: 15px 22px;
@@ -103,6 +111,119 @@
          border-color: $input-border-color;
          background-color: #fcfcfc;
       }
+   }
+   &__info-item-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0 10px;
+   }
+   &__info-sizes-table {
+      margin-left: auto;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 1.2;
+      font-family: "rubik-regular", sans-serif;
+      color: $light-fc;
+      display: inline-block;
+      text-decoration: none;
+   }
+
+   &__info-price-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 0 15px;
+   }
+
+   &__info-price,
+   &__info-button {
+      font-family: "rubik-bold", sans-serif;
+      font-size: 36px;
+      line-height: 1;
+      color: $dark-fc;
+   }
+
+   &__info-button {
+      padding: 11px 22px;
+      border: 1px solid $input-border-color;
+      outline: none;
+      background: transparent;
+      &:focus,
+      &:hover,
+      &:active {
+         outline: none;
+      }
+   }
+
+   &__info-note {
+      border-bottom: 1px solid $input-border-color;
+      font-size: 12px;
+      color: $light-fc;
+      padding: 0 0 5px;
+   }
+   &__info-tags {
+      padding: 17px 0;
+      font-size: 16px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $input-border-color;
+   }
+   &__info-tags-title {
+      font-family: "rubik-bold", sans-serif;
+      margin: 8px 25px 8px 0;
+   }
+   &__info-tags-tag {
+      margin: 8px 30px 8px 0;
+   }
+
+   &__info-user {
+      padding: 28px 0 0;
+   }
+   &__info-user-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+   }
+   &__info-user-img-wrap {
+      margin: 0 25px 0 8px;
+      flex-grow: 1;
+      flex-shrink: 0;
+   }
+   &__info-user-img {
+      width: 103px;
+   }
+   &__info-user-title {
+      margin: 0 0 8px;
+      padding: 0;
+      font-size: 30px;
+      line-height: 1.1;
+      font-family: "rubik-bold", sans-serif;
+      color: $dark-fc;
+   }
+   &__info-user-text {
+      font-size: 13px;
+      line-height: 1.2;
+      color: $light-fc;
+      padding: 0;
+      margin: 0 0 15px;
+   }
+   &__info-user-socials {
+      display: flex;
+      padding: 10px 0;
+   }
+   &__info-user-socials-list {
+      display: flex;
+      margin-left: auto;
+   }
+   &__info-user-socials-img {
+      display: block;
+      width: 35px;
+   }
+   &__info-user-socials-item {
+      margin: 0 0 0 5px;
    }
    
 }
