@@ -1626,6 +1626,7 @@ img {
 
 .good__slider-nav-item {
   padding: 12px 0;
+  cursor: pointer;
 }
 
 .good__slider-nav-item-inner {
