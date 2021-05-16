@@ -1,8 +1,10 @@
 .wrapper_good-header {
    padding: 19px 0;
    border-bottom: 1px solid $input-border-color;
+   @media screen and (max-width: $desktop-media) {
+      padding: 12px 0;
+   }
 }
-
 
 .good-print-name {
    * {
@@ -18,6 +20,14 @@
    &__subtitle {
       font-size: 14px;
       font-weight: normal;
+   }
+   @media screen and (max-width: $desktop-media) {
+      &__title {
+         font-size: 30px;
+      }
+      &__subtitle {
+         font-size: 13px;
+      }
    }
 }
 
@@ -48,6 +58,15 @@
       height: 46px;
       width: auto;
    }
+   @media screen and (max-width: $desktop-media) {
+      &__item {
+         font-size: 20px;
+         padding: 12px 15px;
+      }
+      &__image {
+         height: 35px;
+      }
+   }
 }
 
 .good {
@@ -56,11 +75,22 @@
    align-items: flex-start;
    flex-grow: 1;
    padding: 20px 0 0 0;
+   @media screen and (max-width: $tablet-big-media) {
+      display: block;
+      width: 100%;
+   }
    &__gallery {
       flex: 620px 0 0;
-      width: 620px;
+      max-width: 620px;
       position: relative;
-      overflow: hidden;
+      
+      @media screen and (max-width: $tablet-big-media) {
+         width: 100%;
+         display: block;
+         max-width: none;
+      }
+   }
+   &__slider {
 
    }
    &__slider-nav {
@@ -79,8 +109,7 @@
       background-color: #fff;
    }
    &__info {
-      flex: 525px 0 0;
-
+      flex: 525px 0 1;
    }
    &__info-item {
       border-bottom: 1px solid $input-border-color;
@@ -100,7 +129,11 @@
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
+      @media screen and (max-width: $desktop-media) {
+         font-size: 20px;
+      }
    }
+
    &__info-item-list-item {
       padding: 15px 22px;
       border: 1px solid transparent;
@@ -111,6 +144,9 @@
          color: $dark-fc;
          border-color: $input-border-color;
          background-color: #fcfcfc;
+      }
+      @media screen and (max-width: $desktop-media) {
+         padding: 12px 15px;
       }
    }
    &__info-item-footer {
@@ -134,7 +170,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 0 15px;
+      flex-wrap: wrap;
+      padding: 12px 0 15px;
    }
 
    &__info-price,
@@ -143,6 +180,10 @@
       font-size: 36px;
       line-height: 1;
       color: $dark-fc;
+      margin: 10px 0 0;
+      @media screen and (max-width: $desktop-media) {
+         font-size: 30px;
+      }
    }
 
    &__info-button {
@@ -226,5 +267,6 @@
    &__info-user-socials-item {
       margin: 0 0 0 5px;
    }
-   
+   @media screen and (max-width: $desktop-media) {
+   }
 }

@@ -1534,6 +1534,12 @@ img {
   border-bottom: 1px solid #e0e5eb;
 }
 
+@media screen and (max-width: 1150px) {
+  .wrapper_good-header {
+    padding: 12px 0;
+  }
+}
+
 .good-print-name * {
   margin: 0;
   padding: 0;
@@ -1549,6 +1555,15 @@ img {
 .good-print-name__subtitle {
   font-size: 14px;
   font-weight: normal;
+}
+
+@media screen and (max-width: 1150px) {
+  .good-print-name__title {
+    font-size: 30px;
+  }
+  .good-print-name__subtitle {
+    font-size: 13px;
+  }
 }
 
 .good-types {
@@ -1591,6 +1606,16 @@ img {
   width: auto;
 }
 
+@media screen and (max-width: 1150px) {
+  .good-types__item {
+    font-size: 20px;
+    padding: 12px 15px;
+  }
+  .good-types__image {
+    height: 35px;
+  }
+}
+
 .good {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1607,13 +1632,27 @@ img {
   padding: 20px 0 0 0;
 }
 
+@media screen and (max-width: 992px) {
+  .good {
+    display: block;
+    width: 100%;
+  }
+}
+
 .good__gallery {
   -webkit-box-flex: 620px;
       -ms-flex: 620px 0 0px;
           flex: 620px 0 0;
-  width: 620px;
+  max-width: 620px;
   position: relative;
-  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .good__gallery {
+    width: 100%;
+    display: block;
+    max-width: none;
+  }
 }
 
 .good__slider-nav {
@@ -1636,8 +1675,8 @@ img {
 
 .good__info {
   -webkit-box-flex: 525px;
-      -ms-flex: 525px 0 0px;
-          flex: 525px 0 0;
+      -ms-flex: 525px 0 1;
+          flex: 525px 0 1;
 }
 
 .good__info-item {
@@ -1668,6 +1707,12 @@ img {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1150px) {
+  .good__info-item-list {
+    font-size: 20px;
+  }
+}
+
 .good__info-item-list-item {
   padding: 15px 22px;
   border: 1px solid transparent;
@@ -1679,6 +1724,12 @@ img {
   color: #000;
   border-color: #e0e5eb;
   background-color: #fcfcfc;
+}
+
+@media screen and (max-width: 1150px) {
+  .good__info-item-list-item {
+    padding: 12px 15px;
+  }
 }
 
 .good__info-item-footer {
@@ -1715,7 +1766,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px 0 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 12px 0 15px;
 }
 
 .good__info-price, .good__info-button {
@@ -1723,6 +1776,13 @@ img {
   font-size: 36px;
   line-height: 1;
   color: #000;
+  margin: 10px 0 0;
+}
+
+@media screen and (max-width: 1150px) {
+  .good__info-price, .good__info-button {
+    font-size: 30px;
+  }
 }
 
 .good__info-button {

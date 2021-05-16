@@ -77,6 +77,7 @@ $(document).ready(function () {
    }
 
    if ( $('.js-slider-good').length && $('.js-slider-good-nav').length ) {
+      
       $('.js-slider-good').slick({
          centerMode: false,
          slidesToShow: 1,
