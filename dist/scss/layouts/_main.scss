@@ -95,6 +95,11 @@ img {
       &_stratch {
          align-items: stretch;
       }
+      @media screen and (max-width: $tablet-big-media) {
+         &_wrap-tablet-big-media {
+            flex-wrap: wrap;
+         }
+      }
       @media screen and (max-width: $tablet-media) {
          &_wrap-tablet-media {
             flex-wrap: wrap;

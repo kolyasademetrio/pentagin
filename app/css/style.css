@@ -440,6 +440,13 @@ img {
           align-items: stretch;
 }
 
+@media screen and (max-width: 992px) {
+  .wrapper__inner-row_wrap-tablet-big-media {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .wrapper__inner-row_wrap-tablet-media {
     -ms-flex-wrap: wrap;
@@ -1566,6 +1573,12 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .good-print-name {
+    margin-bottom: 10px;
+  }
+}
+
 .good-types {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1616,6 +1629,25 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .good-types {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .good-types__item {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .good-types__item {
+    font-size: 16px;
+    padding: 10px 12px;
+    line-height: 1.2;
+  }
+}
+
 .good {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1663,9 +1695,22 @@ img {
   padding: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  .good__slider-nav {
+    width: 50px;
+  }
+}
+
 .good__slider-nav-item {
   padding: 12px 0;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .good__slider-nav-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
 .good__slider-nav-item-inner {
@@ -1677,6 +1722,12 @@ img {
   -webkit-box-flex: 525px;
       -ms-flex: 525px 0 1;
           flex: 525px 0 1;
+}
+
+@media screen and (max-width: 992px) {
+  .good__info {
+    margin-top: 10px;
+  }
 }
 
 .good__info-item {
@@ -1718,6 +1769,7 @@ img {
   border: 1px solid transparent;
   cursor: pointer;
   margin: 0 5px 0 0;
+  text-align: center;
 }
 
 .good__info-item-list-item.active, .good__info-item-list-item:hover {
@@ -1729,6 +1781,14 @@ img {
 @media screen and (max-width: 1150px) {
   .good__info-item-list-item {
     padding: 12px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .good__info-item-list-item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 
@@ -1782,6 +1842,17 @@ img {
 @media screen and (max-width: 1150px) {
   .good__info-price, .good__info-button {
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .good__info-price, .good__info-button {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: center;
   }
 }
 

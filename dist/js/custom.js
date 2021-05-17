@@ -100,6 +100,14 @@ $(document).ready(function () {
          vertical: true,
          centerPadding: '30px',
          arrows: false,
+         // responsive: [
+         //    {
+         //       breakpoint: 992,
+         //       settings: {
+         //          vertical: false,
+         //       }
+         //    }
+         // ]
       });
    }
    
