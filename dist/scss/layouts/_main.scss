@@ -95,6 +95,9 @@ img {
       &_stratch {
          align-items: stretch;
       }
+      &_flex-start {
+         align-items: flex-start;
+      }
       @media screen and (max-width: $tablet-big-media) {
          &_wrap-tablet-big-media {
             flex-wrap: wrap;

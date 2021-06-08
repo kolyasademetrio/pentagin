@@ -440,6 +440,12 @@ img {
           align-items: stretch;
 }
 
+.wrapper__inner-row_flex-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 @media screen and (max-width: 992px) {
   .wrapper__inner-row_wrap-tablet-big-media {
     -ms-flex-wrap: wrap;
@@ -1112,6 +1118,17 @@ img {
   }
 }
 
+.user-content {
+  padding: 20px 0 0;
+}
+
+.user-sidebar {
+  -webkit-box-flex: 400px;
+      -ms-flex: 400px 0 0px;
+          flex: 400px 0 0;
+  padding: 0 30px 0 0;
+}
+
 .filters__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1128,6 +1145,17 @@ img {
   border-bottom: 1px solid #e0e5eb;
   border-top: 1px solid #e0e5eb;
   width: 100%;
+}
+
+.filters__list_user-page {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: none;
 }
 
 .filters__item {
@@ -1150,6 +1178,13 @@ img {
   border-radius: 0;
   border: 0;
   background-color: transparent;
+}
+
+.filters__item.filters__item_selectric.filters__item_user-page {
+  border-bottom: 1px solid #e0e5eb;
+  margin: 0;
+  padding: 15px 0;
+  height: auto;
 }
 
 .filters__item.filters__item_selectric .selectric,
@@ -1904,6 +1939,11 @@ img {
   padding: 28px 0 0;
 }
 
+.good__info-user_user-page {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .good__info-user-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1916,6 +1956,10 @@ img {
           align-items: flex-start;
 }
 
+.good__info-user-inner_user-page {
+  display: block;
+}
+
 .good__info-user-img-wrap {
   margin: 0 25px 0 8px;
   -webkit-box-flex: 1;
@@ -1925,8 +1969,22 @@ img {
       flex-shrink: 0;
 }
 
+.good__info-user-img-wrap_user-page {
+  margin: 0 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .good__info-user-img {
   width: 103px;
+}
+
+.good__info-user-info_user-page {
+  text-align: center;
 }
 
 .good__info-user-title {
@@ -1953,11 +2011,21 @@ img {
   padding: 10px 0;
 }
 
+.good__info-user-socials_user-page {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .good__info-user-socials-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+}
+
+.good__info-user-socials-list_user-page {
+  margin-left: 0;
 }
 
 .good__info-user-socials-img {

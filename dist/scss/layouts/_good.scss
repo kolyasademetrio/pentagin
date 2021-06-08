@@ -257,19 +257,36 @@
 
    &__info-user {
       padding: 28px 0 0;
+      &_user-page {
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
    }
    &__info-user-inner {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      &_user-page {
+         display: block;
+      }
    }
    &__info-user-img-wrap {
       margin: 0 25px 0 8px;
       flex-grow: 1;
       flex-shrink: 0;
+      &_user-page {
+         margin: 0 0 20px;
+         display: flex;
+         justify-content: center;
+      }
    }
    &__info-user-img {
       width: 103px;
+   }
+   &__info-user-info {
+      &_user-page {
+         text-align: center;
+      }
    }
    &__info-user-title {
       margin: 0 0 8px;
@@ -289,10 +306,16 @@
    &__info-user-socials {
       display: flex;
       padding: 10px 0;
+      &_user-page {
+         justify-content: center;
+      }
    }
    &__info-user-socials-list {
       display: flex;
       margin-left: auto;
+      &_user-page {
+         margin-left: 0;
+      }
    }
    &__info-user-socials-img {
       display: block;
