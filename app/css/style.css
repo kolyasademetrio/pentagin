@@ -1129,6 +1129,31 @@ img {
   padding: 0 30px 0 0;
 }
 
+@media screen and (max-width: 992px) {
+  .user-sidebar {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 0;
+  }
+}
+
+.user-sidebar__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .user-sidebar__filters {
+    border-bottom: 1px solid #e0e5eb;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 .filters__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1155,7 +1180,17 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: none;
+  border-top: none;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .filters__list_user-page {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: none;
+  }
 }
 
 .filters__item {
@@ -1181,9 +1216,8 @@ img {
 }
 
 .filters__item.filters__item_selectric.filters__item_user-page {
-  border-bottom: 1px solid #e0e5eb;
   margin: 0;
-  padding: 15px 0;
+  padding: 22px 0;
   height: auto;
 }
 
@@ -1773,9 +1807,30 @@ img {
   padding-top: 20px;
 }
 
+@media screen and (max-width: 992px) {
+  .good__info-item_user-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .good__info-item-title {
   color: #000;
   font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .good__info-item-title_user-page {
+    text-align: center;
+  }
 }
 
 .good__info-item-list {
@@ -1796,6 +1851,12 @@ img {
 @media screen and (max-width: 1150px) {
   .good__info-item-list {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .good__info-item-list_user-page {
+    margin-bottom: 20px;
   }
 }
 
@@ -1942,6 +2003,7 @@ img {
 .good__info-user_user-page {
   padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: 1px solid #e0e5eb;
 }
 
 .good__info-user-inner {

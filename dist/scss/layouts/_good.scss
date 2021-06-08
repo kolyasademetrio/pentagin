@@ -141,10 +141,22 @@
       &.pad-top_20 {
          padding-top: 20px;
       }
+      &_user-page {
+         @media screen and (max-width:992px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+      }
    }
    &__info-item-title {
       color: $dark-fc;
       font-size: 12px;
+      &_user-page {
+         @media screen and (max-width:992px) {
+            text-align: center;
+         }
+      }
    }
    &__info-item-list {
       color: $light-fc;
@@ -156,6 +168,11 @@
       flex-wrap: wrap;
       @media screen and (max-width: $desktop-media) {
          font-size: 20px;
+      }
+      @media screen and (max-width: $tablet-big-media) {
+         &_user-page {
+            margin-bottom: 20px;
+         }
       }
    }
 
@@ -260,6 +277,7 @@
       &_user-page {
          padding-top: 20px;
          padding-bottom: 20px;
+         border-bottom: 1px solid $input-border-color;
       }
    }
    &__info-user-inner {

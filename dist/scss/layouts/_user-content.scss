@@ -5,4 +5,17 @@
 .user-sidebar {
    flex: 400px 0 0;
    padding: 0 30px 0 0;
+   @media screen and (max-width:992px) {
+      flex-basis: 100%;
+      padding-right: 0;
+   }
+   &__filters {
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 1100px) {
+         border-bottom: 1px solid $input-border-color;
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+   }
 }
