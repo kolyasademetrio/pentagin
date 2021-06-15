@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 
    const headerMenuBtn = document.querySelector('.js-header-menu-btn');
-   if (headerMenuBtn.length) {
+   if (headerMenuBtn) {
       headerMenuBtn.addEventListener('click', menuToggle(e, 'header', 'header__menu', 'active'));
    }
 
