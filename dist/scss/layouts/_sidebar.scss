@@ -76,7 +76,11 @@ $sidebar-elem-padding-top: 10px;
       padding: $sidebar-elem-padding-top 40px $sidebar-elem-padding-top $sidebar-elem-padding-left;
       background: transparent url("../images/icons/search.png") 97% 50% no-repeat;
       border: 1px solid #b6b6b6;
-      border-color: transparent;
+      border-color: $input-border-color;
+      color: #000;
+      &::placeholder {
+         color: #000;
+      }
    }
 
    &__footer {
@@ -116,7 +120,7 @@ $sidebar-elem-padding-top: 10px;
       margin: 0 5px 0 0;
    }
    &__remove-token {
-      color: $light-color;
+      // color: $light-color;
       font-size: 9px;
       margin: 0 0 0 8px;
       line-height: inherit;
@@ -160,6 +164,7 @@ $sidebar-elem-padding-top: 10px;
 
    @media screen and (max-width: $tablet-media) {
       order: 2;
+      margin-bottom: 0;
       &__tokens,
       &__tokens.active {
          position: relative;

@@ -23,6 +23,11 @@
             border-bottom: none;
          }
       }
+      @media screen and (max-width: $tablet-media) {
+         border-top-color: transparent;
+         border-bottom-color: transparent;
+         margin-bottom: 0;
+      }
    }
    &__item {
       background-color: #eaedf0;
@@ -98,10 +103,13 @@
                background-color: $dark-fc;
                color: #fff;
                font-size: 15px;
-               &.highlighted,
-               &:hover {
+               &.highlighted {
                   background-color: #d5d5d5;
                   color: #444;
+               }
+               &:hover {
+                  background-color: #2d2d2d;
+                  color: #fff;
                }
             }
          }
@@ -172,6 +180,10 @@
                      &:not(.selected) {
                         background-color: transparent;
                         color: $dark-fc;
+                        &:hover {
+                           background-color: #2d2d2d;
+                           color: #fff;
+                        }
                      }
                   }
                }

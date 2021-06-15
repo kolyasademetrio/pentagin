@@ -520,6 +520,12 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mar0-tablet-media {
+    margin: 0 !important;
+  }
+}
+
 .header {
   height: 70px;
   position: relative;
@@ -921,7 +927,28 @@ img {
   padding: 10px 40px 10px 15px;
   background: transparent url("../images/icons/search.png") 97% 50% no-repeat;
   border: 1px solid #b6b6b6;
-  border-color: transparent;
+  border-color: #e0e5eb;
+  color: #000;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.search__input::-moz-placeholder {
+  color: #000;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #000;
+}
+
+.search__input::-ms-input-placeholder {
+  color: #000;
+}
+
+.search__input::placeholder {
+  color: #000;
 }
 
 .search__footer {
@@ -972,7 +999,6 @@ img {
 }
 
 .search__remove-token {
-  color: #d8dae0;
   font-size: 9px;
   margin: 0 0 0 8px;
   line-height: inherit;
@@ -990,6 +1016,7 @@ img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-bottom: 0;
   }
   .search__tokens, .search__tokens.active {
     position: relative;
@@ -1193,6 +1220,14 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .filters__list {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    margin-bottom: 0;
+  }
+}
+
 .filters__item {
   background-color: #eaedf0;
   border: 1px solid #e1e6ea;
@@ -1286,9 +1321,14 @@ img {
   font-size: 15px;
 }
 
-.filters__item.filters__item_selectric .selectric-items li.highlighted, .filters__item.filters__item_selectric .selectric-items li:hover {
+.filters__item.filters__item_selectric .selectric-items li.highlighted {
   background-color: #d5d5d5;
   color: #444;
+}
+
+.filters__item.filters__item_selectric .selectric-items li:hover {
+  background-color: #2d2d2d;
+  color: #fff;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1353,6 +1393,10 @@ img {
   .filters__item.filters__item_selectric-pseudo-radio .selectric-items ul li:not(.selected) {
     background-color: transparent;
     color: #000;
+  }
+  .filters__item.filters__item_selectric-pseudo-radio .selectric-items ul li:not(.selected):hover {
+    background-color: #2d2d2d;
+    color: #fff;
   }
   .filters__item.filters__item_selectric-pseudo-radio .filters__icon.eye + .filters__filter .selectric-items {
     margin-left: 70px;
@@ -1517,6 +1561,7 @@ img {
 @media screen and (max-width: 768px) {
   .goods__title {
     display: block;
+    margin-top: 20px;
   }
 }
 
