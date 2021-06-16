@@ -1724,13 +1724,24 @@ img {
   background-color: #fcfcfc;
 }
 
+.good-types__item.active .good-types__image, .good-types__item:hover .good-types__image {
+  fill: #000;
+}
+
 .good-types__icon {
   margin: 0 12px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .good-types__image {
   height: 46px;
   width: auto;
+  fill: #757575;
 }
 
 @media screen and (max-width: 1150px) {
