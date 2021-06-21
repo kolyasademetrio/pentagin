@@ -33,6 +33,7 @@
       align-items: center;
       &_right {
          margin-left: auto;
+         align-self: stretch;
       }
    }
    &__menu-list,
@@ -53,6 +54,11 @@
       justify-content: center;
       align-items: center;
       padding: 0 0 0 25px;
+      position: relative;
+      &_user {
+         cursor: pointer;
+         align-self: stretch;
+      }
    }
    &__item-logo {
       display: flex;
@@ -77,6 +83,34 @@
    &__item-text {
       padding: 0 0 0 17px;
       @include font(16px, 1.4, $secondary-fc, 600);
+   }
+
+
+
+   &__tiplike-menu {
+      position: absolute;
+      top: 100%;
+      margin-top: -2px;
+      right: 0;
+      background-color: #fff;
+      padding: 27px 39px 35px;
+      border-radius:3px;
+      border: 1px solid $input-border-color;
+      box-shadow: 0 6px 20px 0 rgba(118,118,118,.5) ;
+      z-index: 1;
+      width: 320px;
+   }
+
+   &__tiplike-menu-header {
+      margin: 0 0 35px;
+      border-bottom: 1px solid $input-border-color;
+   }
+
+   &__tiplike-menu-link {
+      display: block;
+      font-size: 16px;
+      line-height: 18px;
+      padding: 9px 17px;
    }
 
    @media screen and (max-width: $desktop-media) {

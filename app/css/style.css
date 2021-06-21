@@ -588,6 +588,8 @@ img {
 
 .header__items_right {
   margin-left: auto;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 
 .header__menu-list, .header__menu-item {
@@ -625,6 +627,13 @@ img {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 0 0 25px;
+  position: relative;
+}
+
+.header__item_user {
+  cursor: pointer;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 
 .header__item-logo {
@@ -660,6 +669,33 @@ img {
   color: #15375c;
   font-weight: 600;
   letter-spacing: normal;
+}
+
+.header__tiplike-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: -2px;
+  right: 0;
+  background-color: #fff;
+  padding: 27px 39px 35px;
+  border-radius: 3px;
+  border: 1px solid #e0e5eb;
+  -webkit-box-shadow: 0 6px 20px 0 rgba(118, 118, 118, 0.5);
+          box-shadow: 0 6px 20px 0 rgba(118, 118, 118, 0.5);
+  z-index: 1;
+  width: 320px;
+}
+
+.header__tiplike-menu-header {
+  margin: 0 0 35px;
+  border-bottom: 1px solid #e0e5eb;
+}
+
+.header__tiplike-menu-link {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 9px 17px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -2200,6 +2236,13 @@ img {
   display: block;
 }
 
+.good__info-user-inner_tiplike-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .good__info-user-img-wrap {
   margin: 0 25px 0 8px;
   -webkit-box-flex: 1;
@@ -2219,12 +2262,33 @@ img {
           justify-content: center;
 }
 
+.good__info-user-img-wrap_tiplike-menu {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 11px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .good__info-user-img {
   width: 103px;
 }
 
+.good__info-user-img_tiplike-menu {
+  width: 53px;
+}
+
 .good__info-user-info_user-page {
   text-align: center;
+}
+
+.good__info-user-info_tiplike-menu {
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 
 .good__info-user-title {
@@ -2234,6 +2298,12 @@ img {
   line-height: 1.1;
   font-family: "rubik-bold", sans-serif;
   color: #000;
+}
+
+.good__info-user-title_tiplike-menu {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .good__info-user-text {

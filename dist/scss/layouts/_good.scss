@@ -293,6 +293,9 @@
       &_user-page {
          display: block;
       }
+      &_tiplike-menu {
+         flex-direction: column;
+      }
    }
    &__info-user-img-wrap {
       margin: 0 25px 0 8px;
@@ -303,13 +306,25 @@
          display: flex;
          justify-content: center;
       }
+      &_tiplike-menu {
+         justify-content: center;
+         margin: 0 0 11px;
+         align-self: stretch;
+         display: flex;
+      }
    }
    &__info-user-img {
       width: 103px;
+      &_tiplike-menu {
+         width: 53px;
+      }
    }
    &__info-user-info {
       &_user-page {
          text-align: center;
+      }
+      &_tiplike-menu {
+         align-self: stretch;
       }
    }
    &__info-user-title {
@@ -319,6 +334,11 @@
       line-height: 1.1;
       font-family: "rubik-bold", sans-serif;
       color: $dark-fc;
+      &_tiplike-menu {
+         font-size: 20px;
+         text-align: center;
+         margin-bottom: 20px;
+      }
    }
    &__info-user-text {
       font-size: 13px;
