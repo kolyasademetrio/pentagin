@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
    if (headerMenuBtn) {
       headerMenuBtn.addEventListener('click', menuToggle(e, 'header', 'header__menu', 'active'));
    }
+   
+   const headerUserBtn = document.querySelector('.js-header-user-btn');
+   if (headerUserBtn) {
+      headerUserBtn.addEventListener('click', menuToggle(e, 'heaheader__itemder', 'header__tiplike-menu', 'active'));
+   }
 
 
    const footerMenuBtns = document.querySelectorAll('.js-footer-menu-item');

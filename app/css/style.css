@@ -634,6 +634,22 @@ img {
   cursor: pointer;
   -ms-flex-item-align: stretch;
       align-self: stretch;
+  position: relative;
+}
+
+.header__item_user:after {
+  content: '';
+  display: inline-block;
+  border: 6px solid transparent;
+  border-top-color: #15375c;
+  margin-left: 8px;
+  margin-right: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.header__item_basket {
+  padding-left: 0;
 }
 
 .header__item-logo {
@@ -672,18 +688,46 @@ img {
 }
 
 .header__tiplike-menu {
+  display: none;
   position: absolute;
   top: 100%;
   margin-top: -2px;
   right: 0;
   background-color: #fff;
-  padding: 27px 39px 35px;
   border-radius: 3px;
   border: 1px solid #e0e5eb;
   -webkit-box-shadow: 0 6px 20px 0 rgba(118, 118, 118, 0.5);
           box-shadow: 0 6px 20px 0 rgba(118, 118, 118, 0.5);
-  z-index: 1;
+  z-index: 10;
   width: 320px;
+}
+
+.header__tiplike-menu.active {
+  display: block;
+}
+
+.header__tiplike-menu:after {
+  content: '';
+  position: absolute;
+  z-index: 9;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #e0e5eb;
+  top: -6px;
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 1;
+}
+
+.header__tiplike-menu-inner {
+  padding: 27px 39px 35px;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .header__tiplike-menu-header {

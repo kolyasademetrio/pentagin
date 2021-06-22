@@ -58,6 +58,20 @@
       &_user {
          cursor: pointer;
          align-self: stretch;
+         position: relative;
+         &:after {
+            content: '';
+            display: inline-block;
+            border: 6px solid transparent;
+            border-top-color: $secondary-fc;
+            margin-left: 8px;
+            margin-right: 20px;
+            position: relative;
+            top: 2px;
+         }
+      }
+      &_basket {
+         padding-left: 0;
       }
    }
    &__item-logo {
@@ -86,19 +100,45 @@
    }
 
 
+   @mixin tiplike-menu-styles {
+      background-color: #fff;
+      border-radius: 3px;
+      border: 1px solid $input-border-color;
+   }
 
    &__tiplike-menu {
+      display: none;
+      &.active {
+         display: block;
+      }
       position: absolute;
       top: 100%;
       margin-top: -2px;
       right: 0;
-      background-color: #fff;
-      padding: 27px 39px 35px;
-      border-radius:3px;
-      border: 1px solid $input-border-color;
+      @include tiplike-menu-styles();
+
       box-shadow: 0 6px 20px 0 rgba(118,118,118,.5) ;
-      z-index: 1;
+      z-index: 10;
       width: 320px;
+      &:after {
+         content: '';
+         position: absolute;
+         z-index: 9;
+         width: 14px;
+         height: 14px;
+         @include tiplike-menu-styles();
+         top: -6px;
+         right: 20px;
+         transform: rotate(45deg);
+         z-index: 1;
+      }
+   }
+
+   &__tiplike-menu-inner {
+      padding: 27px 39px 35px;
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
    }
 
    &__tiplike-menu-header {
